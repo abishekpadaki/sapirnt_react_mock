@@ -1,58 +1,19 @@
 import React from 'react';
-import { Modal } from './components/modal/index';
-import { Notifications } from "./components/notification/index";
+import './App.css';
+import {Provider} from 'react-redux';
+import { store } from './store/store';
+import { Main } from './connect';
+import { BrowserRouter } from 'react-router-dom';
+import RootApp from './components/root.component';
 
-class App extends React.Component {
-
-  constructor() {
-    super();
-    this.state = {
-      modalValues: {
-        name: "Registrations",
-        heading: "Request for Registration",
-        body: ["OracleId: 5555", "FirstName: Dev", "LastName: Boss", "EmailId :boss@gmail.com", "Gender: Male", "Role: Mentor"],
-        footer: true
-      },
-      notificationValues: {
-        heading: "FeedBack Requests",
-        icon: "fas fa-bell",
-        middle: " requested feedback for ",
-        details: [
-          {
-            requester: {
-              name: "Ross",
-              oracleID: 123457
-            },
-            requestfor: {
-              name: "David",
-              oracleID: 123557
-            }
-          },
-          {
-            requester: {
-              name: "Arya",
-              oracleID: 123457
-            },
-            requestfor: {
-              name: "Danny",
-              oracleID: 123557
-            }
-          },
-        ]
-      }
-    }
-  }
-
-  render() {
-    return (
-      <div className="container">
-        <div className="row mt-2">
-          {/* <Modal values = {this.state.modalValues}/>  */}
-          <Notifications values={this.state.notificationValues} />
-        </div>
-      </div>
-    );
-  }
+function App() {
+  return (
+   <Provider store={store}>
+      <BrowserRouter>  
+            <Main/>    
+      </BrowserRouter>
+   </Provider>
+  ); 
 }
 
 export default App;
