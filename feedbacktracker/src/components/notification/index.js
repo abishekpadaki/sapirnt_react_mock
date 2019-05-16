@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/notification.css";
-import DropDownContent from "./dropDownContent";
+import DropDownContent from "../common/dropDownContent";
 
 export class Notifications extends React.Component {
     render() {

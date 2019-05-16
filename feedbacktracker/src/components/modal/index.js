@@ -1,8 +1,7 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { Modal } from 'react-bootstrap';
+import { Button,Modal } from 'react-bootstrap';
 
-export class modal extends React.Component {
+export class Mdl extends React.Component {
 constructor(props, context) {
     super(props, context);
 
