@@ -1,6 +1,10 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 
-export class Product extends React.Component{
+export class SearchResultComponent extends React.Component{
     render() {
         return (
           <Card>
@@ -11,11 +15,15 @@ export class Product extends React.Component{
                 </Col>
                 <Col xs={6}>
                   <Row>
-                    <h2>{this.props.searchResultDeatils.Name}</h2>
+                    {/* <h2>{this.props.searchResultDeatils.Name}</h2> */}
+                    <h2>Name</h2>
                   </Row>
-                  <Row>{this.props.searchResultDeatils.Id}</Row>
+                  {/* <Row>{this.props.searchResultDeatils.Id}</Row> */}
+                  <Row>ID</Row>
+
                   <Row>
-                    {this.props.searchResultDeatils.Designation}
+                    {/* {this.props.searchResultDeatils.Designation} */}
+                    Designation
                   </Row>
                 </Col>
                 <Col>
