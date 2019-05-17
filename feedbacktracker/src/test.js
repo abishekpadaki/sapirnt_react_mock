@@ -83,6 +83,9 @@
 // }
 
 import React from "react" 
+<<<<<<< HEAD
+import Dashboard from "./views/Dashboard/index";
+=======
 
 /*import {Login} from "./views/LoginView/index" 
 
@@ -91,6 +94,7 @@ export default class Test extends React.Component{
     return (<Login/>)
 */            
 import SearchPage from "./views/SearchPage/index";
+>>>>>>> 9d7606d0927de6615d0ca5744b65dc277f0950fe
 
 export default class Test extends React.Component{
 
@@ -102,7 +106,7 @@ export default class Test extends React.Component{
  }
     
   render(){
-    return (<SearchPage role={this.state.role}/>)
+    return (<Dashboard role={this.state.role}/>)
   }
 } 
 
