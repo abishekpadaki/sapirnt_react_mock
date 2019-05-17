@@ -7,8 +7,8 @@ import {Logout} from "../common/logout"
 import Image from 'react-bootstrap/Image'
 
 export class NavbarComponent extends React.Component {
-  constructor() {
-          super();
+  constructor(props) {
+          super(props);
           this.state = {
             modalValues: {
               name: "Registrations",
@@ -46,6 +46,14 @@ export class NavbarComponent extends React.Component {
           }
         }
 render() {
+let regnotif;
+
+if(this.props.role=="HR"){
+  regnotif= <Col md={1}>
+  <Notifications values={this.state.notificationValues} />
+</Col>;  
+}
+
   return (
     <Navbar bg="light" expand="lg">
       <Col xs={2}>
@@ -59,9 +67,7 @@ render() {
           <Col xs={{ span: 1, offset: 2 }}>
               <Notifications values={this.state.notificationValues} />
           </Col>
-          <Col md={1}>
-              <Notifications values={this.state.notificationValues} />
-          </Col>  
+         {regnotif}
           <Col xs={{ span: 1, offset: 1 }}><Logout /></Col>
           
       </Navbar.Collapse>

@@ -83,14 +83,19 @@
 // }
 
 import React from "react" 
-import SideProfile from "./components/side_profile_details/index";
+import Dashboard from "./views/index";
 
 export default class Test extends React.Component{
 
- 
+ constructor(props){
+   super(props);
+   this.state={
+     role:"PM",
+   }
+ }
     
   render(){
-    return (<SideProfile/>)
+    return (<Dashboard role={this.state.role}/>)
   }
 } 
 
