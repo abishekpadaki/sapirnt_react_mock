@@ -1,8 +1,7 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as allactions from './actions/actionCreators';
-import RootApp from "./components/root.component";
-
+import RootApp from "./components/root/index";
 
 // provider makes the store available
 function mapStateToProps(store){

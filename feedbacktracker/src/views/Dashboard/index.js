@@ -6,9 +6,9 @@ import {RequestHrForRegistrationComponent} from '../../components/requestHrForRe
 import {FeedbackDeatilsCardComponent} from '../../components/feedbackDetailsCard/index'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
+// import Container from 'react-bootstrap/Container'
 
-export default class Dashboard extends React.Component{
+export class Dashboard extends React.Component{
     constructor(props){
         super(props);
 
