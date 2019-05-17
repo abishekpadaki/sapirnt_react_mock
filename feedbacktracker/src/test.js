@@ -83,6 +83,13 @@
 // }
 
 import React from "react" 
+
+/*import {Login} from "./views/LoginView/index" 
+
+export default class Test extends React.Component{
+  render(){
+    return (<Login/>)
+*/            
 import SearchPage from "./views/SearchPage/index";
 
 export default class Test extends React.Component{
