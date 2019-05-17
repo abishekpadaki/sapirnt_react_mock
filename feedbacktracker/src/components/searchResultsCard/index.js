@@ -6,6 +6,7 @@ import Image from 'react-bootstrap/Image';
 
 export class SearchResultComponent extends React.Component{
     render() {
+      console.log(this.props.cardlist);
         return (
           <Card>
             <Card.Body>
@@ -15,15 +16,15 @@ export class SearchResultComponent extends React.Component{
                 </Col>
                 <Col xs={6}>
                   <Row>
-                    {/* <h2>{this.props.searchResultDeatils.Name}</h2> */}
-                    <h2>Name</h2>
+                    {<h2>{this.props.cardlist[0].FirstName}</h2>}
+                    
                   </Row>
-                  {/* <Row>{this.props.searchResultDeatils.Id}</Row> */}
-                  <Row>ID</Row>
+                  <Row>{this.props.cardlist[0].OracleID}</Row>
+                  
 
                   <Row>
-                    {/* {this.props.searchResultDeatils.Designation} */}
-                    Designation
+                     {this.props.cardlist[0].role}
+                    
                   </Row>
                 </Col>
                 <Col>

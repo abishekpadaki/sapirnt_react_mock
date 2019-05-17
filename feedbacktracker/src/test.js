@@ -83,14 +83,19 @@
 // }
 
 import React from "react" 
-import SideProfile from "./components/side_profile_details/index";
+import SearchPage from "./views/SearchPage/index";
 
 export default class Test extends React.Component{
 
- 
+ constructor(props){
+   super(props);
+   this.state={
+     role:"HR",
+   }
+ }
     
   render(){
-    return (<SideProfile/>)
+    return (<SearchPage role={this.state.role}/>)
   }
 } 
 
