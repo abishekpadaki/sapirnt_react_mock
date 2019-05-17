@@ -17,4 +17,3 @@ export default class RootApp extends React.Component{
                     </div>
     }
   }
-
