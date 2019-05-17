@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route,Switch} from 'react-router-dom';
-// import { ShoppingCart } from './shoppingcart.component';
-// import { NewProduct } from './new.product';
+import { Login } from "../../views/LoginView/index";
 
 export default class RootApp extends React.Component{
   componentDidMount(){
@@ -11,8 +10,8 @@ export default class RootApp extends React.Component{
     render(){       
           return <div>
                         <Switch>
-                          {/* <Route exact path='/' render={()=><ShoppingCart {...this.props}/>} />
-                          <Route path='/newproduct' render={()=> <NewProduct {...this.props} />} />     */}
+                          <Route exact path='/' render={()=><Login {...this.props}/>} />
+                          <Route exact path='/dashboard' render={()=> <DashBoard {...this.props} />} />    
                         </Switch>
                     </div>
     }

@@ -83,14 +83,11 @@
 // }
 
 import React from "react" 
-import SideProfile from "./components/side_profile_details/index";
+import {Login} from "./views/LoginView/index" 
 
 export default class Test extends React.Component{
-
- 
-    
   render(){
-    return (<SideProfile/>)
+    return (<Login/>)
   }
 } 
 
