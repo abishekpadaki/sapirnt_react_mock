@@ -83,19 +83,19 @@
 // }
 
 import React from "react" 
-import Dashboard from "./views/Dashboard/index";
+import SearchPage from "./views/SearchPage/index";
 
 export default class Test extends React.Component{
 
  constructor(props){
    super(props);
    this.state={
-     role:"PM",
+     role:"HR",
    }
  }
     
   render(){
-    return (<Dashboard role={this.state.role}/>)
+    return (<SearchPage role={this.state.role}/>)
   }
 } 
 
