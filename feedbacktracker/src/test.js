@@ -83,7 +83,7 @@
 // }
 
 import React from "react" 
-import Dashboard from "./views/index";
+import Dashboard from "./views/Dashboard/index";
 
 export default class Test extends React.Component{
 
