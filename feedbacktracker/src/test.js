@@ -83,11 +83,26 @@
 // }
 
 import React from "react" 
-import {Login} from "./views/LoginView/index" 
+
+/*import {Login} from "./views/LoginView/index" 
 
 export default class Test extends React.Component{
   render(){
     return (<Login/>)
+*/            
+import SearchPage from "./views/SearchPage/index";
+
+export default class Test extends React.Component{
+
+ constructor(props){
+   super(props);
+   this.state={
+     role:"HR",
+   }
+ }
+    
+  render(){
+    return (<SearchPage role={this.state.role}/>)
   }
 } 
 

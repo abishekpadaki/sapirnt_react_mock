@@ -31,23 +31,26 @@ export class FeedbackDeatilsCardComponent extends React.Component {
           </Row>
           <Row>
             
-            <Col md={2}>
-              <Button variant="primary" type="submit">
+            <Col md={4}>
+              <Button variant="primary" >
                 View All FeedBacks
               </Button>
             </Col>
-            <Col md={2}>
-              <Button variant="primary" type="submit">
+
+            <Col md={3}>
+              <Button variant="primary" >
                 Growth Areas
               </Button>
             </Col>
-            <Col md={1}>
-              <Button variant="primary" type="submit">
+
+            <Col md={3}>
+              <Button variant="primary" >
                 Top 5 Feedbacks
               </Button>
             </Col>
-            <Col md={{ span: 2, offset: 5 }}>
-            <Card.Text>Rating : {this.state.feedbackCard.Rating}</Card.Text>
+
+            <Col md={2}>
+            Rating : {this.state.feedbackCard.Rating}
             </Col>
           </Row>
         </Card.Body>
