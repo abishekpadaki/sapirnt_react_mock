@@ -4,12 +4,13 @@ import { Container, Row, Col,Form,Button } from "react-bootstrap";
 
 // import "./styles/LoginView.css";
 export class Login extends React.Component {
-    constructor(){
-       super();
+    constructor(props){
+       super(props);
        this.state = {
            username:"",
            password:""
        } 
+    //    console.log(props.allusers);
     }
     render() {
         return <Container>

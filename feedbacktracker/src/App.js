@@ -4,7 +4,6 @@ import {Provider} from 'react-redux';
 import { store } from './store/store';
 import { Main } from './connect';
 import { BrowserRouter } from 'react-router-dom';
-import RootApp from './components/root.component';
 
 
 function App() {
