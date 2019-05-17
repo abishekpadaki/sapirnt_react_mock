@@ -83,7 +83,7 @@
 // }
 
 import React from "react" 
-import SearchPage from "./views/SearchPage/index";
+import Dashboard from "./views/Dashboard/index";
 
 export default class Test extends React.Component{
 
@@ -95,7 +95,7 @@ export default class Test extends React.Component{
  }
     
   render(){
-    return (<SearchPage role={this.state.role}/>)
+    return (<Dashboard role={this.state.role}/>)
   }
 } 
 

@@ -6,7 +6,7 @@ import Image from 'react-bootstrap/Image';
 
 export class SearchResultComponent extends React.Component{
     render() {
-      console.log(this.props.cardlist);
+      
         return (
           <Card>
             <Card.Body>
