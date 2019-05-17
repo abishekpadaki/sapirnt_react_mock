@@ -1,3 +1,4 @@
+
 // import React from 'react';
 // import { Mdl } from './components/modal/index';
 // import { Notifications } from "./components/notification/index";
@@ -81,37 +82,15 @@
 //   }
 // }
 
-
 import React from "react" 
-import {Tbl} from "./components/table/index";
+import SideProfile from "./components/side_profile_details/index";
 
-export class Test extends React.Component{
+export default class Test extends React.Component{
 
-  constructor(){
-    super();
-    this.state = {
-      header:["Sender's Oracle Id","FeedBack","Over All Rating"],
-      values:[
-        {
-          Id: 124057,
-          FeedBack: "Wow what an amazing Employee great stuff and very dedicated",
-          OverAllRating:"4"
-        },
-        {
-          Id: 124357,
-          FeedBack: "Nice work done",
-          OverAllRating:"3"
-        },
-        {
-          Id: 124057,
-          FeedBack: "Best work and keep going",
-          OverAllRating:"5"
-        },
-      ]
-    }
-  }
+ 
+    
   render(){
-    return <Tbl header={this.state.header} values={this.state.values}/>
+    return (<SideProfile/>)
   }
 } 
 
