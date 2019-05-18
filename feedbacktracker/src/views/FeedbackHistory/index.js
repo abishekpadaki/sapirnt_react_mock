@@ -1,6 +1,7 @@
 import React from 'react'
 import {Tbl} from '../../components/table'
 import {NavbarComponent} from '../../components/navbar/index'
+import Container from 'react-bootstrap/Container'
 
 export class FeedbackHistory extends React.Component{
     constructor(props){
@@ -21,7 +22,9 @@ export class FeedbackHistory extends React.Component{
         return(
             <React.Fragment>
                 <NavbarComponent/>
+                <Container>
                 <Tbl header={this.state.header} values={this.state.values} />
+                </Container>
             </React.Fragment>
         )
     }
