@@ -13,14 +13,15 @@ export class Login extends React.Component {
     //    console.log(props.allusers);
     }
     render() {
-        return <Container>
+        return <React.Fragment>
             <Row>
                 <Col md={8}>
-                    <img src="" />
+                    <img className="img-fluid" src='assets/landingPage_Image.jpg' />
                 </Col>
                 <Col md={4}>
+                    <Container>
                     <Row>
-                        <img src="" />
+                        <h2>FEEDBACK TRACKER</h2>
                     </Row>
                     <Form>
                         <Form.Group controlId="formBasicOracleId">
@@ -35,7 +36,7 @@ export class Login extends React.Component {
                             }
                             />
                             <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
+                                
                             </Form.Text>
                         </Form.Group>
 
@@ -52,9 +53,7 @@ export class Login extends React.Component {
                             }
                             />
                         </Form.Group>
-                        <Form.Group controlId="formBasicChecbox">
-                            <Form.Check type="checkbox" label="Check me out" />
-                        </Form.Group>
+                        
                         <Button variant="primary" type="submit"
                             username={this.state.username}
                             password={this.state.password}
@@ -62,8 +61,9 @@ export class Login extends React.Component {
                             Submit
                         </Button>
                     </Form>
+                    </Container>
                 </Col>
-            </Row>
-        </Container>
+                </Row>
+        </React.Fragment>
     }
 }
