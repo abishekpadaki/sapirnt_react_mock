@@ -4,6 +4,7 @@ import { Login } from "../../views/LoginView/index";
 import { Dashboard } from "../../views/Dashboard/index";
 import { FeedbackForm } from "../../views/FeedbackForm/index";
 import { FeedbackHistory } from '../../views/FeedbackHistory';
+import { ForgotPassword } from '../../views/ForgotPassword/index';
 
 export default class RootApp extends React.Component{
     render(){
@@ -13,6 +14,7 @@ export default class RootApp extends React.Component{
                           <Route exact path='/dashboard' render={()=> <Dashboard {...this.props} />} />
                           <Route exact path='/feedback_form' render={()=> <FeedbackForm {...this.props} />} />
                           <Route exact path='/feedback_history' render={()=> <FeedbackHistory {...this.props} />} />
+                          <Route exact path='/forgot_password' render={()=> <ForgotPassword {...this.props} />} />
                         </Switch>
                     </div>
     }
