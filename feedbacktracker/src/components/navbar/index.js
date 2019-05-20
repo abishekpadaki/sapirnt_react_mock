@@ -68,7 +68,7 @@ if(this.props.role=="HR"){
               <Notifications values={this.state.notificationValues} />
           </Col>
          {regnotif}
-          <Col xs={{ span: 1, offset: 1 }}><Logout /></Col>
+          <Col xs={{ span: 1, offset: 1 }}><Logout {...this.props} /></Col>
           
       </Navbar.Collapse>
     </Navbar>
