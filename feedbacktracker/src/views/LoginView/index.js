@@ -13,6 +13,7 @@ export class Login extends React.Component{
     }
     HandleFormSubmit(e) {
         e.preventDefault();
+        // console.log(this.state)
         this.props.AuthenicateUser(this.state);
     }
     componentDidUpdate(){
@@ -24,7 +25,13 @@ export class Login extends React.Component{
         console.log(x);
     }
     render() {
-        console.log(this.props)
+        if(this.props.allusers.isUserLoggedIn){
+            auth.login(() => {
+                this.HandleFormSubmit.bind(this);
+                this.props.history.history.push("/dashboard");
+            });
+        }
+        // console.log(this.props)
         return <React.Fragment>
             <Row>
                 <Col md={8}>
@@ -68,10 +75,12 @@ export class Login extends React.Component{
                         <Button variant="primary" type="submit"
                             username={this.state.username}
                             password={this.state.password}
-                            onClick={() => {
-                                auth.login(() => {
-                                  this.props.history.push("/dashboard");
-                                });
+                            onClick={(e) => {
+                                this.HandleFormSubmit.bind(this,e);
+                                // auth.login(() => {
+                                    // this.HandleFormSubmit.bind(this);
+                                //   this.props.history.push("/dashboard");
+                                // });
                               }}
                         >                            
                             Submit

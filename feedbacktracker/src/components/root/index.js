@@ -12,7 +12,7 @@ export default class RootApp extends React.Component{
     render(){
           return <div>
                         <Switch>
-                          <Route exact path='/' component={Login} />
+                          <Route exact path='/' render={(history)=> <Login {...this.props} history={history}/>} />
                           <ProtectedRoute exact path='/dashboard' component={Dashboard} />
                           <ProtectedRoute exact path='/feedback_history' component={FeedbackHistory} />
                           <ProtectedRoute exact path='/feedback_form' component={FeedbackForm} />
