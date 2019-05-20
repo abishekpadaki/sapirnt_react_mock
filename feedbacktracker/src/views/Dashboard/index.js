@@ -12,7 +12,7 @@ export class Dashboard extends React.Component{
     constructor(props){
         super(props);
 this.state={
-    role:"HR",
+    role:"PM",
 }
     }
     
