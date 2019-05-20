@@ -28,6 +28,7 @@ export class Logout extends React.Component {
             
           // }}
           href="/"
+          onClick={() => {localStorage.removeItem('LsOId')}}
           >Log Out</Button>
         );
       }
