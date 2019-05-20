@@ -13,7 +13,7 @@ export class Login extends React.Component{
     }
     HandleFormSubmit(e) {
         e.preventDefault();
-        // console.log(this.state)
+         
         this.props.AuthenicateUser(this.state);
         
     }
@@ -48,7 +48,8 @@ export class Login extends React.Component{
                         <Form.Group controlId="formBasicOracleId">
                             <Form.Label>Oracle Id</Form.Label>
                             <Form.Control 
-                                type="text" 
+                                type="text"
+                                ref="oracleId" 
                                 placeholder="Enter Oracle Id" 
                                 value = {this.state.oracleId}
                                 onChange={(e) => {
@@ -75,10 +76,11 @@ export class Login extends React.Component{
                         </Form.Group>
                         
                         <Button variant="primary" type="submit"
-                            username={this.state.username}
-                            password={this.state.password}
+                            // username={this.state.username}
+                            // password={this.state.password}
                             onClick={(e) => {
                                 this.HandleFormSubmit.bind(this,e);
+                                localStorage.setItem('loggedInUser', this.state[0]);
                                 // auth.login(() => {
                                     // this.HandleFormSubmit.bind(this);
                                 //   this.props.history.push("/dashboard");
