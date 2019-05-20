@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col,Form,Button } from "react-bootstrap";
 
-
+import auth from "../../auth"
 // import "./styles/LoginView.css";
-export class Login extends React.Component {
+export class Login extends React.Component{
     constructor(props){
        super(props);
        this.state = {
@@ -57,6 +57,11 @@ export class Login extends React.Component {
                         <Button variant="primary" type="submit"
                             username={this.state.username}
                             password={this.state.password}
+                            onClick={() => {
+                                auth.login(() => {
+                                  this.props.history.push("/dashboard");
+                                });
+                              }}
                         >                            
                             Submit
                         </Button>

@@ -11,12 +11,14 @@ import Col from 'react-bootstrap/Col'
 export class Dashboard extends React.Component{
     constructor(props){
         super(props);
-
+this.state={
+    role:"HR",
+}
     }
     
     render(){
         let reqview;
-        if(this.props.role=="HR"){
+        if(this.state.role=="HR"){
         reqview=<React.Fragment>
                 
                
@@ -52,7 +54,7 @@ export class Dashboard extends React.Component{
 
     return( 
     <React.Fragment>
-    <NavbarComponent role={this.props.role}/>
+    <NavbarComponent role={this.state.role} {...this.props}/>
                 
         <Row>
             <Col md={4}>
@@ -60,7 +62,7 @@ export class Dashboard extends React.Component{
             </Col>
             <Col md={8}>
                 <Row>
-                    <FeedbackDeatilsCardComponent/>
+                    <FeedbackDeatilsCardComponent  {...this.props}/>
                 </Row>
                 {reqview}
                 </Col>

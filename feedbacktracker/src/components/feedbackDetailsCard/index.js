@@ -4,9 +4,16 @@ import Row from "react-bootstrap/Row";
 import Col from 'react-bootstrap/Col';
 import Button from "react-bootstrap/Button";
 
+import auth from "../../auth"
+
 export class FeedbackDeatilsCardComponent extends React.Component {
-  constructor() {
-    super();
+  
+  constructor(props) {
+    super(props);
+    
+  
+    
+   
     this.state = {
       feedbackCard: {
         Rating: "5",
@@ -32,7 +39,14 @@ export class FeedbackDeatilsCardComponent extends React.Component {
           <Row>
             
             <Col md={4}>
-              <Button variant="primary" >
+              <Button variant="primary"  
+                               onClick={() => {
+                               
+                                  this.props.history.push("/feedback_history");
+                                
+                              }}
+                               
+                              >
                 View All FeedBacks
               </Button>
             </Col>
@@ -58,3 +72,4 @@ export class FeedbackDeatilsCardComponent extends React.Component {
     );
   }
 }
+
