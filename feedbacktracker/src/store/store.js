@@ -10,14 +10,11 @@ import requests from "../jsonData/requestDb";
 // create a new store !
 //createStore(reducer,data);  //=> Redux !
 
-var defdata ={
+var data={
     users:dataBase,
     registrations:registrations,
     feedBacks:feedBack,
     searchCards:searchCard,
-    requests:requests
+    requests:requests,
 };
-
-export var store = createStore(rootReducer,defdata);
-
-
+export var store = createStore(rootReducer,data);

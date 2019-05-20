@@ -5,7 +5,7 @@ import RootApp from "./components/root/index";
 
 // provider makes the store available
 function mapStateToProps(store){
-    return {
+        return {
             allusers:store.users,
             allregistrations:store.registrations,
             allfeedBacks:store.feedBacks,
