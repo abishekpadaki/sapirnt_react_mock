@@ -6,15 +6,22 @@ import { FeedbackForm } from "../../views/FeedbackForm/index";
 import { FeedbackHistory } from '../../views/FeedbackHistory';
 import { ForgotPassword } from '../../views/ForgotPassword/index';
 
+// import { AppLayout } from "./app.layout";
+import { ProtectedRoute } from "../../protected_route";
 export default class RootApp extends React.Component{
     render(){
           return <div>
                         <Switch>
-                          <Route exact path='/' render={()=><Login {...this.props}/>} />
-                          <Route exact path='/dashboard' render={()=> <Dashboard {...this.props} />} />
-                          <Route exact path='/feedback_form' render={()=> <FeedbackForm {...this.props} />} />
-                          <Route exact path='/feedback_history' render={()=> <FeedbackHistory {...this.props} />} />
+                          <Route exact path='/' component={Login} />
+                          <ProtectedRoute exact path='/dashboard' component={Dashboard} />
+                          <ProtectedRoute exact path='/feedback_history' component={FeedbackHistory} />
+                          <ProtectedRoute exact path='/feedback_form' component={FeedbackForm} />
+
+                          
+                          
+                          
                           <Route exact path='/forgot_password' render={()=> <ForgotPassword {...this.props} />} />
+
                         </Switch>
                     </div>
     }

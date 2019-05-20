@@ -21,7 +21,7 @@ export class FeedbackHistory extends React.Component{
     render(){
         return(
             <React.Fragment>
-                <NavbarComponent/>
+                <NavbarComponent {...this.props}/>
                 <Container>
                 <Tbl header={this.state.header} values={this.state.values} />
                 </Container>

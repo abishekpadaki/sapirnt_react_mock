@@ -7,7 +7,7 @@ export default class SideProfile extends React.Component{
         return (
             
             <Card style={{ width: '15rem' }}>
-  <Card.Img variant="top" src="avatar2.png" />
+  <Card.Img variant="top" src="assets/avatar2.png" />
   <Card.Body>
     
     <Card.Text>
