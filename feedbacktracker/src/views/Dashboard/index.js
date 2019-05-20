@@ -56,7 +56,7 @@ export class Dashboard extends React.Component{
                 
         <Row>
             <Col md={4}>
-                <SideProfile/>
+                <SideProfile {...this.props}/>
             </Col>
             <Col md={8}>
                 <Row>

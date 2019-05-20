@@ -24,6 +24,7 @@ export class Login extends React.Component {
         console.log(x);
     }
     render() {
+        console.log(this.props)
         return <React.Fragment>
             <Row>
                 <Col md={8}>
