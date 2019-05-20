@@ -7,10 +7,21 @@ export class Login extends React.Component {
     constructor(props){
        super(props);
        this.state = {
-           username:"",
+           oracleId:"",
            password:""
-       } 
-    //    console.log(props.allusers);
+       }
+    }
+    HandleFormSubmit(e) {
+        e.preventDefault();
+        this.props.AuthenicateUser(this.state);
+    }
+    componentDidUpdate(){
+        // if(this.props.allUsers[0].isUserLoggedIn){
+        //     let {history} = this.props;
+        //     history.push('/cart');
+        // }
+        var x = this.props;
+        console.log(x);
     }
     render() {
         return <React.Fragment>
@@ -23,15 +34,15 @@ export class Login extends React.Component {
                     <Row>
                         <h2>FEEDBACK TRACKER</h2>
                     </Row>
-                    <Form>
+                    <Form onSubmit = {this.HandleFormSubmit.bind(this)}>
                         <Form.Group controlId="formBasicOracleId">
                             <Form.Label>Oracle Id</Form.Label>
                             <Form.Control 
                                 type="text" 
                                 placeholder="Enter Oracle Id" 
-                                value={this.state.username}
-                                onChange={(e) => { 
-                                    return this.setState({ username: e.target.value })
+                                value = {this.state.oracleId}
+                                onChange={(e) => {
+                                    return this.setState({ oracleId: e.target.value })
                                 }
                             }
                             />
@@ -45,20 +56,15 @@ export class Login extends React.Component {
                             <Form.Control 
                                 type="password" 
                                 placeholder="Password" 
-                                value={this.state.password}
+                                value = {this.state.password}
                                 onChange={(e) => {
-                                    // console.log(e.target.value);
                                     return this.setState({ password: e.target.value })
                                 }
                             }
                             />
-                        </Form.Group>
-                        
-                        <Button variant="primary" type="submit"
-                            username={this.state.username}
-                            password={this.state.password}
-                        >                            
-                            Submit
+                        </Form.Group>                        
+                        <Button variant="primary" type="submit">                            
+                            Sign In
                         </Button>
                     </Form>
                     </Container>
