@@ -15,20 +15,22 @@ export class Login extends React.Component{
         e.preventDefault();
         // console.log(this.state)
         this.props.AuthenicateUser(this.state);
+        
     }
-    componentDidUpdate(){
-        // if(this.props.allUsers[0].isUserLoggedIn){
-        //     let {history} = this.props;
-        //     history.push('/cart');
-        // }
-        var x = this.props;
-        console.log(x);
-    }
+    // componentDidUpdate(){
+    //     // if(this.props.allUsers[0].isUserLoggedIn){
+    //     //     let {history} = this.props;
+    //     //     history.push('/cart');
+    //     // }
+    //     var x = this.props;
+    //     console.log(x);
+    // }
     render() {
         if(this.props.allusers.isUserLoggedIn){
             auth.login(() => {
                 this.HandleFormSubmit.bind(this);
                 this.props.history.history.push("/dashboard");
+              
             });
         }
         // console.log(this.props)
