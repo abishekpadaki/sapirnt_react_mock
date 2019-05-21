@@ -8,3 +8,23 @@
     height: 150px;
     margin-bottom: 20%;
 }
+
+.topnavbar{
+    margin-bottom: 20px;
+}
+
+.sidebar{
+    margin-left: 10px;
+}
+
+.sidebar_text{
+    text-align: center;
+}
+
+.srchbuttn{
+    margin-bottom: 8px;
+}
+
+.badge{
+    margin-left: 7px;
+}

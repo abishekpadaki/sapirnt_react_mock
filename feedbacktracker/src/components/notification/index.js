@@ -10,9 +10,11 @@ export class Notifications extends React.Component {
         let bdg = this.props.values.details.length;
         return <React.Fragment >
             <div className="dropdown">
-                <button className="btn btn-primary notification dropdown">
-                    <i className={this.props.values.icon} > </i>
-                    <span className="badge" > {bdg} </span>
+                <button className="btn btn-primary dropdown">
+                    {/* <i className={this.props.values.icon} > </i> */}
+                    <i className="fas fa-bell"></i>
+                    <span className="badge badge-warning">{bdg}</span>
+                    {/* <span className="badge" > {bdg} </span> */}
                 </button>
                 <div className="dropdown-content" >
                     <h3> {this.props.values.heading} </h3>

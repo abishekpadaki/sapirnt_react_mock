@@ -29,12 +29,12 @@ export class SearchResultComponent extends React.Component{
                 </Col>
                 <Col>
                   <Row>
-                    <button className="btn btn-primary">
+                    <button className="btn btn-primary srchbuttn">
                       Request Feedback for Self
                     </button>
                   </Row>
                   <Row>
-                    <button className="btn btn-primary">
+                    <button className="btn btn-primary srchbuttn">
                       Request Feedback for Someone Else
                     </button>
                   </Row>                  

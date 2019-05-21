@@ -12,7 +12,11 @@ export class SearchComponent extends React.Component {
             placeholder="Search"
             className="mr-sm-2"
           />
-          <Button variant="outline-success">Search</Button>
+          <Button variant="outline-success"  onClick={() => {
+                               
+                               this.props.history.push("/search_page");
+                             
+                           }}>Search</Button>
         </Form>
       );
     }

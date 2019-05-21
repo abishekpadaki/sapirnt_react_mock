@@ -8,7 +8,7 @@ export default class SideProfile extends React.Component{
         console.log(loggedInUser)
         return (
             
-            <Card style={{ width: '15rem' }}>
+            <Card className="sidebar" style={{ width: '15rem' }}>
   <Card.Img variant="top" src="assets/avatar2.png" />
   <Card.Body>
     

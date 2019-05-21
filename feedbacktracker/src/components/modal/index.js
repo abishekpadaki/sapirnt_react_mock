@@ -45,7 +45,7 @@ render() {
     return (
     <>
         <Button variant="primary" onClick={this.handleShow}>
-            {this.props.values.name}
+        <i class="fas fa-user-plus"></i>{/* {this.props.values.name} */}
         </Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
