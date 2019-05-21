@@ -22,17 +22,19 @@ class FeedbackHistory extends React.Component{
         props.FetchFeedbackHistory();
     }
 
-    render(){
-        const feedbackHistoryArray = this.props.allfeedBacks.filter((p,i) =>
+    getFeedbackData = (props) => {
+        const res = this.props.allfeedBacks.filter((p,i) =>
         p.OracleId === this.props.login.userDetails.oracleId);
-        console.log(feedbackHistoryArray);
-        console.log(this.props);
 
+        return res
+    }
+
+    render(){
         return(
             <React.Fragment>
                 <NavbarComponent {...this.props}/>
                 <Container>
-                <Tbl header={this.state.header} values={feedbackHistoryArray} />
+                <Tbl header={this.state.header} values={this.getFeedbackData()} />
                 </Container>
             </React.Fragment>
         )
