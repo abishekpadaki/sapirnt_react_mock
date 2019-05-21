@@ -24,14 +24,11 @@ export default class RootApp extends React.Component{
                           <ProtectedRoute exact path='/dashboard' component={MainDashboard} />
                           <ProtectedRoute exact path='/feedback_history' component={MainFeedbackHistory} />
                           <ProtectedRoute exact path='/feedback_form' component={FeedbackForm} />
-<<<<<<< HEAD
                           <ProtectedRoute exact path='/search_page' component={SearchPage}/>
 
                           
                           
                           
-=======
->>>>>>> d476cc781e2120a49793f4ad9ab7807b114ae699
                           <Route exact path='/forgot_password' render={()=> <ForgotPassword {...this.props} />} />
 
                         </Switch>
