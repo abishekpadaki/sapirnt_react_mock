@@ -8,6 +8,7 @@ import { ForgotPassword } from '../../views/ForgotPassword/index';
 
 // import { AppLayout } from "./app.layout";
 import { ProtectedRoute } from "../../protected_route";
+import SearchPage from '../../views/SearchPage';
 export default class RootApp extends React.Component{
     render(){
           return <div>
@@ -16,6 +17,7 @@ export default class RootApp extends React.Component{
                           <ProtectedRoute exact path='/dashboard' component={Dashboard} />
                           <ProtectedRoute exact path='/feedback_history' component={FeedbackHistory} />
                           <ProtectedRoute exact path='/feedback_form' component={FeedbackForm} />
+                          <ProtectedRoute exact path='/search_page' component={SearchPage}/>
 
                           
                           

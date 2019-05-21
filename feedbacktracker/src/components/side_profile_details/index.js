@@ -6,14 +6,14 @@ export default class SideProfile extends React.Component{
     render() {
         return (
             
-            <Card style={{ width: '15rem' }}>
+            <Card className="sidebar" style={{ width: '15rem' }}>
   <Card.Img variant="top" src="assets/avatar2.png" />
   <Card.Body>
     
-    <Card.Text>
-      <h2>Abishek P</h2>
-      <h3>224634</h3>
-      <h3>Human Resources</h3>
+    <Card.Text className="sidebar_text">
+      <h3>Abishek P</h3>
+      <h4>224634</h4>
+      <h4>Human Resources</h4>
     </Card.Text>
   
   </Card.Body>

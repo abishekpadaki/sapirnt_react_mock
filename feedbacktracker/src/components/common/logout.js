@@ -22,14 +22,14 @@ export class Logout extends React.Component {
     //     });
     // }
         return (
-          <Button 
+          <Button className="btn btn-danger"
           // onClick={() => {
           //   this.logoutfunc.bind(this);
             
           // }}
           href="/"
           onClick={() => {localStorage.removeItem('LsOId')}}
-          >Log Out</Button>
+          ><i class="fas fa-sign-out-alt"></i></Button>
         );
       }
     }

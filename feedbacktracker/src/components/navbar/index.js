@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import {Notifications} from "../notification/index";
 import {Logout} from "../common/logout"
 import Image from 'react-bootstrap/Image'
+import {Mdl} from '../modal/index'
 
 export class NavbarComponent extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ export class NavbarComponent extends React.Component {
               name: "Registrations",
               heading: "Request for Registration",
               body: ["OracleId: 5555", "FirstName: Dev", "LastName: Boss", "EmailId :boss@gmail.com", "Gender: Male", "Role: Mentor"],
-              footer: false
+              footer: true
             },
             notificationValues: {
               heading: "FeedBack Requests",
@@ -50,19 +51,23 @@ let regnotif;
 
 if(this.props.role=="HR"){
   regnotif= <Col md={1}>
-  <Notifications values={this.state.notificationValues} />
+  <Mdl values={this.state.modalValues} />
 </Col>;  
 }
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className="topnavbar" bg="light"  expand="lg">
       <Col xs={2}>
-        <Image src={require("./assets/publicisSapient1.png")} alt="Logo" fluid />
+        <Image src={require("./assets/sapient_logo.png")}  alt="Logo" fluid onClick={() => {
+                               
+                               this.props.history.push("/dashboard");
+                             
+                           }} />
       </Col>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
           <Col xs={{ span: 4, offset: 2 }}>
-            <SearchComponent />
+            <SearchComponent {...this.props}/>
           </Col>
           <Col xs={{ span: 1, offset: 2 }}>
               <Notifications values={this.state.notificationValues} />

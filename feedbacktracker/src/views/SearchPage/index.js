@@ -59,7 +59,7 @@ for(var key in data){
 
 return(
     <React.Fragment>
-    <NavbarComponent role={this.props.role}/>
+    <NavbarComponent {...this.props}/>
     <Container>
     {cardx}
     </Container>
