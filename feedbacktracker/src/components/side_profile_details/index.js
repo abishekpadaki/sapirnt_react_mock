@@ -4,6 +4,8 @@ import Card from 'react-bootstrap/Card';
 
 export default class SideProfile extends React.Component{
     render() {
+        let loggedInUser = this.props.login.userDetails
+        console.log(loggedInUser)
         return (
             
             <Card style={{ width: '15rem' }}>
@@ -11,9 +13,9 @@ export default class SideProfile extends React.Component{
   <Card.Body>
     
     <Card.Text>
-      <h2>Abishek P</h2>
-      <h3>224634</h3>
-      <h3>Human Resources</h3>
+      <strong>Name: {loggedInUser.FirstName} {loggedInUser.LastName}</strong><br />
+      <strong>OracleId: {loggedInUser.oracleId}</strong><br />
+      <strong>Role: {loggedInUser.role}</strong>
     </Card.Text>
   
   </Card.Body>

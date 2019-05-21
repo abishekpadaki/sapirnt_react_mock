@@ -18,7 +18,7 @@ export class Login extends React.Component{
         
     }
     // componentDidUpdate(){
-    //     // if(this.props.allUsers[0].isUserLoggedIn){
+    //     // if(this.props.login[0].isUserLoggedIn){
     //     //     let {history} = this.props;
     //     //     history.push('/cart');
     //     // }
@@ -26,7 +26,7 @@ export class Login extends React.Component{
     //     console.log(x);
     // }
     render() {
-        if(this.props.allusers.isUserLoggedIn){
+        if(this.props.login.isUserLoggedIn){
             auth.login(() => {
                 this.HandleFormSubmit.bind(this);
                 this.props.history.history.push("/dashboard");
@@ -80,7 +80,7 @@ export class Login extends React.Component{
                             // password={this.state.password}
                             onClick={(e) => {
                                 this.HandleFormSubmit.bind(this,e);
-                                localStorage.setItem('loggedInUser', this.state[0]);
+                                // localStorage.setItem('loggedInUser', this.state[0]);
                                 // auth.login(() => {
                                     // this.HandleFormSubmit.bind(this);
                                 //   this.props.history.push("/dashboard");

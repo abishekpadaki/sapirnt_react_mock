@@ -14,12 +14,14 @@ export class Tbl extends React.Component{
                 return <th>{val}</th>
             }
         )
+        // console.log(this.props.values);
         let row = this.props.values.map(
             (val,i) => {
+                
                 return <tr> 
-                    <td>{val.Id}</td>
-                    <td>{val.FeedBack}</td>
-                    <td>{val.OverAllRating}</td>
+                    <td>{val.OracleId}</td>
+                    <td>{val.Suggestions}</td>
+                    <td>{val.OverallRating}</td>
                 </tr>
             }
         )

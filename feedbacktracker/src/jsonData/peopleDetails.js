@@ -1,6 +1,6 @@
 var dataBase = [
     {
-        OracleId: "123457",
+        oracleId: "123457",
         FirstName: "John",
         LastName: "Doe",
         EmailId: "john@gmail.com",
@@ -10,7 +10,7 @@ var dataBase = [
         role:"HR" 
     },
     {
-        OracleId: "123557",
+        oracleId: "123557",
         FirstName: "David",
         LastName: "joe",
         EmailId: "david@gmail.com",
@@ -20,7 +20,7 @@ var dataBase = [
         role:"PM"
     },
     {
-        OracleId: "123657",
+        oracleId: "123657",
         FirstName: "Ross",
         LastName: "boe",
         EmailId: "ross@gmail.com",
@@ -30,7 +30,7 @@ var dataBase = [
         role:"CT"
     },
     {
-        OracleId: "123757",
+        oracleId: "123757",
         FirstName: "Micheal",
         LastName: "Boss",
         EmailId: "boss@gmail.com",
@@ -40,7 +40,7 @@ var dataBase = [
         role:"Mentor"
     },
     {
-        OracleId: "123857",
+        oracleId: "123857",
         FirstName: "Micheal",
         LastName: "gooby",
         EmailId: "gooby@gmail.com",
@@ -51,7 +51,7 @@ var dataBase = [
     },
     
     {
-        OracleId: "123957",
+        oracleId: "123957",
         FirstName: "Lochan",
         LastName: "Rn",
         EmailId: "lochan@gmail.com",
@@ -62,7 +62,7 @@ var dataBase = [
     },
     
     {
-        OracleId: "124057",
+        oracleId: "124057",
         FirstName: "Anurag",
         LastName: "hakeem",
         EmailId: "anurag@gmail.com",
