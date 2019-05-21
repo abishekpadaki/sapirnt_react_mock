@@ -14,6 +14,7 @@ import * as allactions from '../../actions/actionCreators';
 class Dashboard extends React.Component{
     constructor(props){
         super(props);
+
     }
     
     render(){
