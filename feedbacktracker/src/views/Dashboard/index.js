@@ -6,19 +6,22 @@ import {RequestHrForRegistrationComponent} from '../../components/requestHrForRe
 import {FeedbackDeatilsCardComponent} from '../../components/feedbackDetailsCard/index'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as allactions from '../../actions/actionCreators';
 // import Container from 'react-bootstrap/Container'
 
-export class Dashboard extends React.Component{
+class Dashboard extends React.Component{
     constructor(props){
         super(props);
-this.state={
-    role:"",
-}
     }
     
     render(){
+        // console.log(this.props.login.FirstName)
         let reqview;
-        if(this.state.role=="HR"){
+        // console.log(this.props.login.userDetails.role)
+        if(this.props.login.userDetails.role=="HR"){
+        // console.log(this.props.login.userDetails.FirstName)
         reqview=<React.Fragment>
                 
                
@@ -36,6 +39,8 @@ this.state={
     }
 
     else{
+        // console.log(this.props.login.FirstName);
+
         reqview=<React.Fragment>
        
                  <Row>
@@ -54,7 +59,7 @@ this.state={
 
     return( 
     <React.Fragment>
-    <NavbarComponent role={this.state.role} {...this.props}/>
+    <NavbarComponent role={this.props.login.userDetails.role} {...this.props}/>
                 
         <Row>
             <Col md={4}>
@@ -70,3 +75,20 @@ this.state={
                 </React.Fragment>)
 }
 }
+
+function mapStateToProps(store){
+    // console.log(store);
+    return {
+        login:store.users,
+        allregistrations:store.registrations,
+        allfeedBacks:store.feedBacks,
+        allsearchCards:store.searchCards,
+        allrequests:store.requests        
+}
+}
+
+function mapDispatchToProps(dispatcher){
+    return bindActionCreators(allactions,dispatcher)
+}
+
+export var MainDashboard  = connect(mapStateToProps,mapDispatchToProps)(Dashboard);

@@ -16,7 +16,7 @@ export class Logout extends React.Component {
 // }
     render() {
 
-    //   if(!this.props.allusers.isUserLoggedIn){
+    //   if(!this.props.login.isUserLoggedIn){
        
           
     //     });
@@ -28,7 +28,7 @@ export class Logout extends React.Component {
             
           // }}
           href="/"
-          onClick={() => {localStorage.removeItem('LsOId')}}
+          onClick={() => {localStorage.removeItem('loggedInUser')}}
           >Log Out</Button>
         );
       }
