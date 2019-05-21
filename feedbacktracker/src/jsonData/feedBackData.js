@@ -1,5 +1,5 @@
 var feedBack = [{
-        OracleId: 123457,
+        OracleId: "123457",
         OverallRating: 5,
         ClientFocusedDelivery: 5,
         Creativity: 5,
@@ -13,22 +13,22 @@ var feedBack = [{
         SenderOracleID: 123557
     },
     {
-        fOracleId: 123557,
-        fOverallRating: 5,
-        fClientFocusedDelivery: 5,
-        fCreativity: 5,
-        fLeadership: 5,
-        fOpeness: 5,
-        fPeopleGrowth: 5,
-        fRelationships: 5,
-        fSuggestions: `Great work please continue working like this.`,
-        fGrowthAreas: "No one better then him,lol,ok byee,Just another sentence",
-        fTop5Stuff: "He is osum,Amaze core values,less openness,Very leadership material",
-        fSenderOracleIDf: 123657
+        OracleId: "123557",
+        OverallRating: 5,
+        ClientFocusedDelivery: 5,
+        Creativity: 5,
+        Leadership: 5,
+        Openess: 5,
+        PeopleGrowth: 5,
+        Relationships: 5,
+        Suggestions: `Great work please continue working like this.`,
+        GrowthAreas: "No one better then him,lol,ok byee,Just another sentence",
+        Top5Stuff: "He is osum,Amaze core values,less openness,Very leadership material",
+        SenderOracleIDf: 123657
     },
 
     {
-        OracleID: 123657,
+        OracleID: "123657",
         OverallRating: 5,
         ClientFocusedDelivery: 5,
         Creativity: 5,
@@ -42,7 +42,7 @@ var feedBack = [{
         SenderOracleID: 124057
     },
     {
-        OracleID: 124057,
+        OracleID: "124057",
         OverallRating: 5,
         ClientFocusedDelivery: 5,
         Creativity: 5,
@@ -56,7 +56,7 @@ var feedBack = [{
         SenderOracleID: 123457
     },
     {
-        OracleId: 123857,
+        OracleId: "123857",
         OverallRating: 5,
         ClientFocusedDelivery: 5,
         Creativity: 5,

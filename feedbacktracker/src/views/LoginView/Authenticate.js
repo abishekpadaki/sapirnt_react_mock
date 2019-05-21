@@ -4,7 +4,7 @@ export class Login extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            dataBase : props.allusers
+            dataBase : props.login
         }
     }
     render(){

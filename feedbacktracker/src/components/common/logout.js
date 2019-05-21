@@ -16,7 +16,7 @@ export class Logout extends React.Component {
 // }
     render() {
 
-    //   if(!this.props.allusers.isUserLoggedIn){
+    //   if(!this.props.login.isUserLoggedIn){
        
           
     //     });
