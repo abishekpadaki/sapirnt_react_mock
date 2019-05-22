@@ -30,6 +30,7 @@ class FeedbackHistory extends React.Component{
     }
 
     render(){
+        console.log(this.props)
         return(
             <React.Fragment>
                 <NavbarComponent {...this.props}/>

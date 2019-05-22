@@ -21,51 +21,55 @@ export class FeedbackDeatilsCardComponent extends React.Component {
         Feedback: "Great work please continue working like this."
       }
     };
+
+    
   }
+
+//   getFeedbackData = (props) => {
+//     const res = this.props.allfeedBacks.filter((p,i) =>
+//     p.OracleId === this.props.login.userDetails.oracleId);
+
+//     return res
+// }
   render() {
+    // console.log(this.props.res[0]);
+    // var res = this.props.allfeedBacks.filter((p,i) =>
+    // p.OracleId === this.props.login.userDetails.oracleId);
+    
     return (
       <Card>
         <Card.Body>
           <Row>
-            <Card.Title>
-              Feedback from {this.state.feedbackCard.FeedbackSender}
-            </Card.Title>
+          {this.props.res[0]?<Card.Title>
+            Feedback from {this.props.res[0].SenderFirstName}
+            </Card.Title>:''}
             <br />
           </Row>
           <Row>
-            <Card.Text>{this.state.feedbackCard.Feedback}</Card.Text>
+          {this.props.res[0]?<Card.Text>{this.props.res[0].Suggestions}</Card.Text>:''}
             <br />
           </Row>
           <Row>
-            
             <Col md={4}>
-              <Button variant="primary"  
-                               onClick={() => {
-                               
-                                  this.props.history.push("/feedback_history");
-                                
-                              }}
-                               
-                              >
+              <Button
+                variant="primary"
+                onClick={() => {
+                  this.props.history.push("/feedback_history");
+                }}
+              >
                 View All FeedBacks
               </Button>
             </Col>
 
             <Col md={3}>
-              <Button variant="primary" >
-                Growth Areas
-              </Button>
+              <Button variant="primary">Growth Areas</Button>
             </Col>
 
             <Col md={3}>
-              <Button variant="primary" >
-                Top 5 Feedbacks
-              </Button>
+              <Button variant="primary">Top 5 Feedbacks</Button>
             </Col>
 
-            <Col md={2}>
-            Rating : {this.state.feedbackCard.Rating}
-            </Col>
+            {this.props.res[0]?<Col md={2}>Rating : {this.props.res[0].OverallRating}</Col>:''}
           </Row>
         </Card.Body>
       </Card>

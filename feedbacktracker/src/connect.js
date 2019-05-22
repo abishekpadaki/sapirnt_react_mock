@@ -9,7 +9,7 @@ function mapStateToProps(store){
         return {
             login:store.users,
             allregistrations:store.registrations,
-            allfeedBacks:store.feedBacks,
+            allfeedBacks:store.feedBack,
             allsearchCards:store.searchCards,
             allrequests:store.requests        
     }

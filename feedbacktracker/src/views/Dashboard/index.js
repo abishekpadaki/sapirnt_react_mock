@@ -14,10 +14,19 @@ import * as allactions from '../../actions/actionCreators';
 class Dashboard extends React.Component{
     constructor(props){
         super(props);
-
+        props.FetchFeedbackHistory();
+        // console.log(props)
     }
     
+    getFeedbackData = (props) => {
+        const res = this.props.allfeedBacks.filter((p,i) =>
+        p.OracleId === this.props.login.userDetails.oracleId);
+
+        return res
+    }
+
     render(){
+        // console.log(this.getFeedbackData())
         // console.log(this.props.login.FirstName)
         let reqview;
         // console.log(this.props.login.userDetails.role)
@@ -68,7 +77,7 @@ class Dashboard extends React.Component{
             </Col>
             <Col md={8}>
                 <Row>
-                    <FeedbackDeatilsCardComponent  {...this.props}/>
+                    <FeedbackDeatilsCardComponent  {...this.props} res={this.getFeedbackData()}/>
                 </Row>
                 {reqview}
                 </Col>
@@ -82,7 +91,7 @@ function mapStateToProps(store){
     return {
         login:store.users,
         allregistrations:store.registrations,
-        allfeedBacks:store.feedBacks,
+        allfeedBacks:store.feedBack,
         allsearchCards:store.searchCards,
         allrequests:store.requests        
 }
