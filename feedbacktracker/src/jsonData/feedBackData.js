@@ -10,7 +10,24 @@ var feedBack = [{
         Suggestions: `Wow. What an amazing EMployee! SO much dedictaion. such hard work. `,
         GrowthAreas: "Can do better,Reason 2,Stop giving unnecessary lectures,Just another sentence",
         Top5Stuff: "He is wow,Amaze core values,Full openness,Very leadership material",
-        SenderOracleID: 123557
+        SenderOracleID: "123557",
+        SenderFirstName: "David"
+    },
+    {
+        OracleId: "123457",
+        OverallRating: 5,
+        ClientFocusedDelivery: 5,
+        Creativity: 5,
+        Leadership: 5,
+        Openess: 5,
+        PeopleGrowth: 5,
+        Relationships: 5,
+        Suggestions: `Hottie `,
+        GrowthAreas: "No",
+        Top5Stuff: "He can make maggie in 1 minute",
+        SenderOracleID: "123557",
+        SenderFirstName: "David"
+
     },
     {
         OracleId: "123557",
@@ -24,7 +41,8 @@ var feedBack = [{
         Suggestions: `Great work please continue working like this.`,
         GrowthAreas: "No one better then him,lol,ok byee,Just another sentence",
         Top5Stuff: "He is osum,Amaze core values,less openness,Very leadership material",
-        SenderOracleIDf: 123657
+        SenderOracleIDf: "123657",
+        SenderFirstName: "Ross"
     },
 
     {
@@ -39,7 +57,8 @@ var feedBack = [{
         Suggestions: "Suggestions, Text here",
         GrowthAreas: "something",
         Top5Stuff: "He is nothing,lol core values,less openness,Very lame material",
-        SenderOracleID: 124057
+        SenderOracleID: "124057",
+        SenderFirstName: "Anurag"
     },
     {
         OracleID: "124057",
@@ -53,7 +72,8 @@ var feedBack = [{
         Suggestions:"ok good try bye please dont disturb",
         GrowthAreas: "something,what, is, wrong, with u",
         Top5Stuff: "nothing,chal nikal,bye",
-        SenderOracleID: 123457
+        SenderOracleID: "123457",
+        SenderFirstName: "John"
     },
     {
         OracleId: "123857",
@@ -67,7 +87,8 @@ var feedBack = [{
         GrowthAreas: "something",
         Suggestions: "nothing",
         Top5Stuff: "nothing,chal nikal,bye",
-        SenderOracleID: 123457
+        SenderOracleID: "123457",
+        SenderFirstName: "John"
     },
 
 ];
