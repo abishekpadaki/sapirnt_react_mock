@@ -9,13 +9,13 @@ export default class SideProfile extends React.Component{
         return (
             
             <Card className="sidebar" style={{ width: '15rem' }}>
-  <Card.Img variant="top" src="assets/avatar2.png" />
+  <Card.Img variant="top" src={loggedInUser.profilePic} />
   <Card.Body>
     
     <Card.Text>
-      <strong>Name: {loggedInUser.FirstName} {loggedInUser.LastName}</strong><br />
-      <strong>OracleId: {loggedInUser.oracleId}</strong><br />
-      <strong>Role: {loggedInUser.role}</strong>
+     <h3>{loggedInUser.FirstName} {loggedInUser.LastName}</h3>
+      <h4>OracleId: {loggedInUser.oracleId}</h4>
+      <h4>Role: {loggedInUser.role}</h4>
     </Card.Text>
   
   </Card.Body>

@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 export class RequestHrForRegistrationComponent extends React.Component{
     render() {
         return (
-          <Card>
+          <Card className="card_comp">
             <Card.Body>
               <Row className="justify-content-md-center">
                 <Card.Title>Request HR For Registration</Card.Title> 
