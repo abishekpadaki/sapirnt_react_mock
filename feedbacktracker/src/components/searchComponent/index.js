@@ -11,10 +11,12 @@ export class SearchComponent extends React.Component {
             type="text"
             placeholder="Search"
             className="mr-sm-2"
+            ref="search_txt"
           />
           <Button variant="outline-success"  onClick={() => {
                                
                                this.props.history.push("/search_page");
+                               sessionStorage.setItem("search_txt", this.refs.search_txt.value);
                              
                            }}>Search</Button>
         </Form>
