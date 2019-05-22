@@ -12,18 +12,18 @@ export class SearchResultComponent extends React.Component{
             <Card.Body>
               <Row>
                 <Col xs={2}>
-                  <Image src="https://urlzs.com/xs7uC" thumbnail />
+                  <Image src={this.props.pic} thumbnail />
                 </Col>
                 <Col xs={6}>
                   <Row>
-                    {<h2>{this.props.cardlist[0].FirstName}</h2>}
+                    {<h2>{this.props.name}</h2>}
                     
                   </Row>
-                  <Row>{this.props.cardlist[0].OracleID}</Row>
+                  <Row>{this.props.id}</Row>
                   
 
                   <Row>
-                     {this.props.cardlist[0].role}
+                     {this.props.role}
                     
                   </Row>
                 </Col>
