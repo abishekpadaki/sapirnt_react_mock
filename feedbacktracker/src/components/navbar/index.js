@@ -58,7 +58,7 @@ if(this.props.role=="HR"){
   return (
     <Navbar className="topnavbar" bg="light"  expand="lg">
       <Col xs={2}>
-        <Image src={require("./assets/sapient_logo.png")}  alt="Logo" fluid onClick={() => {
+        <Image className="logo_img" src={require("./assets/sapient_logo.png")}  alt="Logo" fluid onClick={() => {
                                
                                this.props.history.push("/dashboard");
                              
