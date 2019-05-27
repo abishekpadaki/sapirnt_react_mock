@@ -1,5 +1,6 @@
 import database from "../jsonData/peopleDetails";
 import feedBack from "../jsonData/feedBackData";
+import requests from "../jsonData/requestDb";
 
 import { functionExpression } from "@babel/types";
 
@@ -22,4 +23,10 @@ export function FetchFeedbackHistory(){
     console.log(feedBack);
     // localStorage.setItem('loggedInUser', JSON.stringify(userDetails[0]));
     return {type: 'FETCH_FEEDBACK_HISTORY',feedBack};
+}
+
+export function FetchRequests(){
+    console.log(requests);
+    // localStorage.setItem('loggedInUser', JSON.stringify(userDetails[0]));
+    return {type: 'FETCH_REQUESTS',requests};
 }
