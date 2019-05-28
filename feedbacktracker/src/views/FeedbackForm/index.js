@@ -7,15 +7,23 @@ import Button from 'react-bootstrap/Button'
 export class FeedbackForm extends React.Component{
     constructor(props){
         super(props);
+        
+    
     }
+    getRequests = (props) => {
+        const res1 = this.props.allrequests.filter((p,i) =>
+        p.OracleId === this.props.login.userDetails.oracleId);
 
+        return res1
+    }
     render(){
         return(<React.Fragment>
-            <NavbarComponent/>
+            
             <Container>
-        
+            {/* <NavbarComponent role={this.props.login.userDetails.role} res={this.getRequests()} {...this.props}/> */}
+            
         <Form.Group><h1>Feedback Form</h1></Form.Group>
-        <Form action="" method="post">
+        <Form onSubmit={()=>{alert("Feedback Submitted")}}>
             <Form.Group>
                 <Form.Label for="oracleId">Oracle ID:</Form.Label>
                 <Form.Control type="text" class="form-control" id="oracleId" placeholder="Oracle id of feedback recepient"
