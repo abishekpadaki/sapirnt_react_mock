@@ -3,9 +3,23 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+function alert_display(){
+  
+    alert("Feedback Request Sent");
+  
+
+}
+
 
 export class SearchResultComponent extends React.Component{
+  constructor(props){
+    super(props);
+   
+  
+    }
+  
     render() {
+      
       
         return (
           <Card>
@@ -16,7 +30,7 @@ export class SearchResultComponent extends React.Component{
                 </Col>
                 <Col xs={6}>
                   <Row>
-                    {<h2>{this.props.name}</h2>}
+                    {<h2>{this.props.fname} {this.props.lname}</h2>}
                     
                   </Row>
                   <Row>{this.props.id}</Row>
@@ -29,7 +43,7 @@ export class SearchResultComponent extends React.Component{
                 </Col>
                 <Col>
                   <Row>
-                    <button className="btn btn-primary srchbuttn">
+                    <button className="btn btn-primary srchbuttn" onClick={() => { alert("Feedback Request Sent")}}>
                       Request Feedback for Self
                     </button>
                   </Row>

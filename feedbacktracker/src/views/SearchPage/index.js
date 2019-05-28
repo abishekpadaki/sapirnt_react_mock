@@ -18,6 +18,13 @@ this.state={
             "profilePic":"https://cdn1.iconfinder.com/data/icons/avatars-55/100/avatar_profile_user_music_headphones_shirt_cool-512.png",
             "role": "Human Resources"
         },
+        {
+            "OracleID": "1234599",
+            "FirstName": "Abhishek",
+            "LastName": "Jha",
+            "profilePic":"https://cdn1.iconfinder.com/data/icons/avatars-55/100/avatar_profile_user_music_headphones_shirt_cool-512.png",
+            "role": "Project Manager"
+        },
     
         {
             "OracleID": "1234568",
@@ -109,7 +116,7 @@ for (var key in match) {
     
     searchview=<Row>
 
-<SearchResultComponent {...this.props} name={match[key].FirstName} id={match[key].OracleID} role={match[key].role} pic={match[key].profilePic}/>
+<SearchResultComponent {...this.props} fname={match[key].FirstName} lname={match[key].LastName} id={match[key].OracleID} role={match[key].role} pic={match[key].profilePic}/>
 
 </Row>;
 }
