@@ -16,5 +16,6 @@ var data={
     feedBacks:feedBack,
     searchCards:searchCard,
     requests:requests,
+    fetchsearch:dataBase
 };
 export var store = createStore(rootReducer,data);

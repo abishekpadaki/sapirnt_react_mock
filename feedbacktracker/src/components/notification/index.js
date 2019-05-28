@@ -18,21 +18,22 @@ export class Notifications extends React.Component {
     //     // var dropDownDisplay = this.props.res[0].notifications.map((val, i) => {
     //     //     return <DropDownContent requester={val.requester} content={this.props.values.middle} requestfor={val.requestfor} {...this.props}/>
     //     // });
-    //     console.log(this.props.res)
+        // console.log(this.props.res)
     //     var dropDownDisplay = this.props.values.details.map((val, i) => {
     //              return <DropDownContent requester={val.requester} content={this.props.values.middle} requestfor={val.requestfor} {...this.props}/>
     //             });
     // }
 
-    var dropDownDisplay = this.props.values.details.map((val, i) => {
-        return <DropDownContent requester={val.requester} content={this.props.values.middle} requestfor={val.requestfor} {...this.props}/>
-    });
+    // var dropDownDisplay = this.props.values.details.map((val, i) => {
+    //     return <DropDownContent requester={val.requester} content={this.props.values.middle} requestfor={val.requestfor} {...this.props}/>
+    // });
 
-            // let dropDownDisplay = this.props.res.notifications.map((val, i) => {
-            //     return <DropDownContent requester={val.requester} content={this.props.values.middle} requestfor={val.requestfor} {...this.props}/>
-            // });
+            let dropDownDisplay = this.props.res[0].notifications.map((val, i) => {
+                return <DropDownContent requester={val.requester} content={this.props.values.middle} requestfor={val.requestfor} {...this.props}/>
+            });
 
-        let bdg = this.props.values.details.length;
+        // let bdg = this.props.values.details.length;
+        let bdg = this.props.res[0].notifications.length;
         console.log(this.props.res)
         
         return <React.Fragment >

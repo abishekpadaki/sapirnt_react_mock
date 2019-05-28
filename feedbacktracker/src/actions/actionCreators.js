@@ -15,6 +15,11 @@ export function AuthenicateUser(user){
     return {type: 'IS_USER_AUTHENTICATED',userDetails};
 }
 
+export function fetchsearch(){
+    console.log(database)
+    return {type: 'FETCH_SEARCH_PAGE',database};
+}
+
 export function Logout(){
     return {type: 'IS_LOGGED_OUT'};
 }
