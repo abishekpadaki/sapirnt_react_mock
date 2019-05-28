@@ -43,18 +43,22 @@ export class NavbarComponent extends React.Component {
                   }
                 },
               ]
-            }
+              
+            },
+            //Selected NotificationID
+            notificationObject:{}
           }
         }
 render() {
 let regnotif;
-
+// console.log(this.res)
 if(this.props.role=="HR"){
   regnotif= <Col md={1}>
   <Mdl values={this.state.modalValues} />
 </Col>;  
+console.log(this.res)
 }
-
+console.log(this.res)
   return (
     <Navbar className="topnavbar" bg="light"  expand="lg">
       <Col xs={2}>
@@ -70,7 +74,7 @@ if(this.props.role=="HR"){
             <SearchComponent {...this.props}/>
           </Col>
           <Col xs={{ span: 1, offset: 2 }}>
-              <Notifications values={this.state.notificationValues} />
+              <Notifications values={this.state.notificationValues} {...this.props}/>
           </Col>
          {regnotif}
           <Col xs={{ span: 1, offset: 1 }}><Logout {...this.props} /></Col>
