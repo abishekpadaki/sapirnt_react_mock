@@ -15,6 +15,7 @@ class Dashboard extends React.Component{
     constructor(props){
         super(props);
         props.FetchFeedbackHistory();
+        props.FetchRequests();
         // console.log(props)
     }
     
@@ -25,9 +26,17 @@ class Dashboard extends React.Component{
         return res
     }
 
+    getRequests = (props) => {
+        const res1 = this.props.allrequests.filter((p,i) =>
+        p.OracleId === this.props.login.userDetails.oracleId);
+
+        return res1
+    }
+
     render(){
         // console.log(this.getFeedbackData())
         // console.log(this.props.login.FirstName)
+        // console.log(this.props)
         let reqview;
         // console.log(this.props.login.userDetails.role)
         if(this.props.login.userDetails.role=="HR"){
@@ -69,7 +78,7 @@ class Dashboard extends React.Component{
 
     return( 
     <React.Fragment>
-    <NavbarComponent role={this.props.login.userDetails.role} {...this.props}/>
+    <NavbarComponent role={this.props.login.userDetails.role} res={this.getRequests()} {...this.props}/>
                 
         <Row>
             <Col md={4}>

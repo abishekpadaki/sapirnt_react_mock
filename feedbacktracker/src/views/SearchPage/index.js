@@ -5,8 +5,11 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import { SearchComponent } from '../../components/searchComponent';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as allactions from '../../actions/actionCreators';
 
-export default class SearchPage extends React.Component{
+ class SearchPage extends React.Component{
     constructor(props){
         super(props);
 this.state={
@@ -96,6 +99,7 @@ render(){
     var match=[{}];
     var clist=this.state.cardlist;
     console.log(clist);
+    console.log(this.props)
 for(var key in clist){
     
         
@@ -158,3 +162,20 @@ return(
     )
     }
 }
+
+function mapStateToProps(store){
+    // console.log(store);
+    return {
+        login:store.users,
+        allregistrations:store.registrations,
+        allfeedBacks:store.feedBack,
+        allsearchCards:store.searchCards,
+        allrequests:store.requests        
+}
+}
+
+function mapDispatchToProps(dispatcher){
+    return bindActionCreators(allactions,dispatcher)
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(SearchPage);
