@@ -126,7 +126,7 @@ for (var key in match) {
     
     searchview=<Row>
 
-<SearchResultComponent {...this.props} name={match[key].FirstName} id={match[key].OracleID} role={match[key].role} pic={match[key].profilePic}/>
+<SearchResultComponent {...this.props} fname={match[key].FirstName} lname={match[key].LastName} id={match[key].OracleID} role={match[key].role} pic={match[key].profilePic}/>
 
 </Row>;
 }
