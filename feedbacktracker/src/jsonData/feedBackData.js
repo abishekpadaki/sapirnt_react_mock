@@ -22,7 +22,7 @@ var feedBack = [{
         Openess: 5,
         PeopleGrowth: 5,
         Relationships: 5,
-        Suggestions: `Hottie `,
+        Suggestions: `Persistent worker`,
         GrowthAreas: "No",
         Top5Stuff: "He can make maggie in 1 minute",
         SenderOracleID: "123557",
