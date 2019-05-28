@@ -29,11 +29,17 @@ class FeedbackHistory extends React.Component{
         return res
     }
 
+    getRequests = (props) => {
+        const res1 = this.props.allrequests.filter((p,i) =>
+        p.OracleId === this.props.login.userDetails.oracleId);
+    
+        return res1
+    }
     render(){
         // console.log(this.props)
         return(
             <React.Fragment>
-                <NavbarComponent {...this.props}/>
+                <NavbarComponent role={this.props.login.userDetails.role} res={this.getRequests()} {...this.props}/>
                 <Container>
                 <Tbl header={this.state.header} values={this.getFeedbackData()} />
                 </Container>

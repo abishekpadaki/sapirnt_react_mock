@@ -12,32 +12,35 @@ import * as allactions from '../../actions/actionCreators';
  class SearchPage extends React.Component{
     constructor(props){
         super(props);
-this.state={
-    cardlist: [
-        {
-            "OracleID": "1234567",
-            "FirstName": "Abishek",
-            "LastName": "Padaki",
-            "profilePic":"https://cdn1.iconfinder.com/data/icons/avatars-55/100/avatar_profile_user_music_headphones_shirt_cool-512.png",
-            "role": "Human Resources"
-        },
+        props.fetchsearch();
+// this.state={
+//     cardlist: [
+//         {
+//             "OracleID": "1234567",
+//             "FirstName": "Abishek",
+//             "LastName": "Padaki",
+//             "profilePic":"https://cdn1.iconfinder.com/data/icons/avatars-55/100/avatar_profile_user_music_headphones_shirt_cool-512.png",
+//             "role": "Human Resources"
+//         },
     
-        {
-            "OracleID": "1234568",
-            "FirstName": "Anurag",
-            "LastName": "Hakeem",
-            "profilePic":"https://cdn3.iconfinder.com/data/icons/business-round-flat-vol-1-1/36/user_account_profile_avatar_person_student_male-512.png",
-            "role": "Human Resources"
-        },
+//         {
+//             "OracleID": "1234568",
+//             "FirstName": "Anurag",
+//             "LastName": "Hakeem",
+//             "profilePic":"https://cdn3.iconfinder.com/data/icons/business-round-flat-vol-1-1/36/user_account_profile_avatar_person_student_male-512.png",
+//             "role": "Human Resources"
+//         },
     
-        {
-            "OracleID": "1234569",
-            "FirstName": "Raja",
-            "LastName": "Lochan",
-            "profilePic":"https://cdn3.iconfinder.com/data/icons/business-round-flat-vol-1-1/36/user_account_profile_avatar_person_businessman_male-512.png",
-            "role": "Human Resources"
-        },
-    ],}
+//         {
+//             "OracleID": "1234569",
+//             "FirstName": "Raja",
+//             "LastName": "Lochan",
+//             "profilePic":"https://cdn3.iconfinder.com/data/icons/business-round-flat-vol-1-1/36/user_account_profile_avatar_person_businessman_male-512.png",
+//             "role": "Human Resources"
+//         },
+//     ],}
+
+    
 
 
 // componentWillMount(){
@@ -82,15 +85,25 @@ this.state={
 
 }
 
+
+
+getRequests = (props) => {
+    const res1 = this.props.allrequests.filter((p,i) =>
+    p.OracleId === this.props.login.userDetails.oracleId);
+
+    return res1
+}
+
 render(){
 
+    console.log(this.props)
     var x= sessionStorage.getItem('search_txt');
     console.log(x);
     let searchview;
   
     var j=0;
     var match=[{}];
-    var clist=this.state.cardlist;
+    var clist=this.props.allusers;
     console.log(clist);
     console.log(this.props)
 for(var key in clist){
@@ -147,7 +160,7 @@ else{
 
 return(
     <React.Fragment>
-    <NavbarComponent {...this.props}/>
+    <NavbarComponent role={this.props.login.userDetails.role} res={this.getRequests()} {...this.props}/>
     <Container>
     {searchview}
     </Container>
@@ -163,7 +176,8 @@ function mapStateToProps(store){
         allregistrations:store.registrations,
         allfeedBacks:store.feedBack,
         allsearchCards:store.searchCards,
-        allrequests:store.requests        
+        allrequests:store.requests,
+        allusers:store.fetchsearch        
 }
 }
 
