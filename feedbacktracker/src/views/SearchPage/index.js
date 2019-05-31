@@ -9,11 +9,10 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as allactions from '../../actions/actionCreators';
 
- class SearchPage extends React.Component{
+ export class SearchPage extends React.Component{
     constructor(props){
         super(props);
-        props.fetchsearch();
-// this.state={
+//        
 //     cardlist: [
 //         {
 //             "OracleID": "1234567",
