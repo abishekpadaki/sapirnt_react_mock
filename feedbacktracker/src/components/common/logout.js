@@ -29,7 +29,7 @@ export class Logout extends React.Component {
           // }}
           href="/"
           onClick={() => {localStorage.removeItem('loggedInUser')}}
-          ><i class="fas fa-sign-out-alt"></i></Button>
+          ><i className="fas fa-sign-out-alt"></i></Button>
         );
       }
     }

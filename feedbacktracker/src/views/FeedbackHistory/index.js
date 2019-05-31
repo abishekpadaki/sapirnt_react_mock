@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as allactions from '../../actions/actionCreators';
 
-class FeedbackHistory extends React.Component{
+export class FeedbackHistory extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -19,7 +19,7 @@ class FeedbackHistory extends React.Component{
                 }
             ]
         }
-        props.FetchFeedbackHistory();
+        // props.FetchFeedbackHistory();
     }
 
     getFeedbackData = (props) => {
