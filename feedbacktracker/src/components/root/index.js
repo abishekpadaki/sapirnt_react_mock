@@ -23,7 +23,7 @@ export default class RootApp extends React.Component{
                           <Route exact path='/' render={(history)=> <Login {...this.props} history={history}/>} />
                           <ProtectedRoute exact path='/dashboard' component={MainDashboard} />
                           <ProtectedRoute exact path='/feedback_history' component={MainFeedbackHistory} />
-                          <ProtectedRoute exact path='/feedback_form' component={FeedbackForm} />
+                          <ProtectedRoute exact path='/feedback_form' component={FeedbackForm} {...this.props}/>
                           <ProtectedRoute exact path='/search_page' component={SearchPage}/>
 
                           
