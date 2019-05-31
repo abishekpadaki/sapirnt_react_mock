@@ -35,6 +35,11 @@ export class FeedbackHistory extends React.Component{
     
         return res1
     }
+
+    componentDidMount(){
+        // dispatch an action
+        this.props.FetchFeedbackHistory(); // ??
+      }
     render(){
         // console.log(this.props)
         return(

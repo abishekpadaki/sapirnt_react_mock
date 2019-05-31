@@ -14,7 +14,7 @@ import * as allactions from '../../actions/actionCreators';
 class Dashboard extends React.Component{
     constructor(props){
         super(props);
-        props.FetchFeedbackHistory();
+        
         props.FetchRequests();
         // console.log(props)
     }
@@ -32,6 +32,11 @@ class Dashboard extends React.Component{
 
         return res1
     }
+
+    componentDidMount(){
+        // dispatch an action
+        this.props.FetchFeedbackHistory(); // ??
+      }
 
     render(){
         // console.log(this.getFeedbackData())

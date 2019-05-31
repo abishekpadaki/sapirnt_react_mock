@@ -1,8 +1,10 @@
 import database from "../jsonData/peopleDetails";
-import feedBack from "../jsonData/feedBackData";
+//import feedBack from "../jsonData/feedBackData";
 import requests from "../jsonData/requestDb";
 
 import { functionExpression } from "@babel/types";
+
+
 
 
 export function AuthenicateUser(user){
@@ -25,13 +27,18 @@ export function Logout(){
 }
 
 export function FetchFeedbackHistory(){
-    console.log(feedBack);
+   // console.log(feedBack);
     // localStorage.setItem('loggedInUser', JSON.stringify(userDetails[0]));
-    return {type: 'FETCH_FEEDBACK_HISTORY',feedBack};
+    return {type: 'FETCH_FEEDBACK_HISTORY'};
 }
 
 export function FetchRequests(){
     console.log(requests);
     // localStorage.setItem('loggedInUser', JSON.stringify(userDetails[0]));
     return {type: 'FETCH_REQUESTS',requests};
+}
+
+export function AddNewFeedback(thenewproduct) {
+    console.log(thenewproduct);
+    return {type:'ADD_NEW_FEEDBACK',thenewproduct};
 }
