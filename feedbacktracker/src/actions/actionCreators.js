@@ -1,11 +1,12 @@
 import database from "../jsonData/peopleDetails";
-//import feedBack from "../jsonData/feedBackData";
+import feedBack from "../jsonData/feedBackData";
 import requests from "../jsonData/requestDb";
 
-import { functionExpression } from "@babel/types";
+// import { functionExpression } from "@babel/types";
+export const FETCH_FEEDBACK_HISTORY = 'FETCH_FEEDBACK_HISTORY';
+export const ADD_NEW_FEEDBACK = 'ADD_NEW_FEEDBACK';
 
-
-
+// const fb=feedBack;
 
 export function AuthenicateUser(user){
     // console.log(user)
@@ -29,7 +30,7 @@ export function Logout(){
 export function FetchFeedbackHistory(){
    // console.log(feedBack);
     // localStorage.setItem('loggedInUser', JSON.stringify(userDetails[0]));
-    return {type: 'FETCH_FEEDBACK_HISTORY'};
+    return {type: 'FETCH_FEEDBACK_HISTORY',feedBack};
 }
 
 export function FetchRequests(){

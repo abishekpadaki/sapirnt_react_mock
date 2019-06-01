@@ -12,6 +12,7 @@ import * as allactions from '../../actions/actionCreators';
  export class SearchPage extends React.Component{
     constructor(props){
         super(props);
+        console.log(this.props.login);
 //        
 //     cardlist: [
 //         {

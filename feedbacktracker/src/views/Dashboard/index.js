@@ -16,6 +16,7 @@ class Dashboard extends React.Component{
         super(props);
         
         props.FetchRequests();
+        props.FetchFeedbackHistory();
         // console.log(props)
     }
     
@@ -33,10 +34,7 @@ class Dashboard extends React.Component{
         return res1
     }
 
-    componentDidMount(){
-        // dispatch an action
-        this.props.FetchFeedbackHistory(); // ??
-      }
+    
 
     render(){
         // console.log(this.getFeedbackData())
