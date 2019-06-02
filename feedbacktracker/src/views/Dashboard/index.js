@@ -61,7 +61,7 @@ export class Dashboard extends React.Component{
                
          <Row>
             <Col md={8}>
-                <ViewFeedbackDatabase/>
+                <ViewFeedbackDatabase {...this.props}/>
                 </Col> 
                 
         </Row>

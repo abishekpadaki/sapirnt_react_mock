@@ -15,11 +15,13 @@ export class ViewFeedbackDatabase extends React.Component{
               </Row>
              
               <Row className="justify-content-md-center">
-                   <Link to="/fb_db">
-                <Button variant="dark" >
+                   
+                <Button variant="dark" onClick={() => {
+                  this.props.history.push("/fb_db");
+                }} >
                     Click to View
                 </Button>
-                </Link>
+               
               </Row>
             </Card.Body>
           </Card>

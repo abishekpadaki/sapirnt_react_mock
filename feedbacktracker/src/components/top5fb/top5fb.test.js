@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {SearchResultComponent} from './index';
-
-
-
+import {T5fbMdl} from './index';
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<SearchResultComponent pic={"test"} fname={"test"} lname={"test"} id={"123"} role={"test"} />, div);
+  ReactDOM.render(<T5fbMdl value="test"  />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
