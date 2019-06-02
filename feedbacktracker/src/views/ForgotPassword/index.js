@@ -23,11 +23,11 @@ handleClick(){
 
         </Form.Group>
         
-        <Button type="submit" class="btn btn-primary">Send Reset link to mail</Button>
+        <Button type="submit" variant="dark">Send Reset link to mail</Button>
         
     </Form> <br></br>
     <Link to="/">
-    <Button>Back To Login Page</Button></Link>
+    <Button variant="dark">Back To Login Page</Button></Link>
 </Container>
 </Row>
 

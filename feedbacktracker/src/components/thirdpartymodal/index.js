@@ -40,7 +40,7 @@ render() {
               placeholder="Third Party Oracle ID or Name" ref="txtid"
             />
           </Form.Group>
-          <Button variant="primary" type="submit"
+          <Button variant="primary btn-dark" type="submit"
             >
             Submit
           </Button>
@@ -51,7 +51,7 @@ render() {
     
     return (
     <>
-        <Button variant="primary" onClick={this.handleShow}>
+        <Button variant="primary btn-dark srchbuttn" onClick={this.handleShow}>
         Request Feedback From Someone Else
         </Button>
 

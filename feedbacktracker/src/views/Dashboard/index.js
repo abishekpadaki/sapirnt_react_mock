@@ -78,10 +78,10 @@ export class Dashboard extends React.Component{
                 </Row>
        
                  <Row>
-                    <Col md={3}>
+                    <Col md={4}>
                         <RequestHrForRegistrationComponent/>
                     </Col> 
-                    <Col md={4}>
+                    <Col md={3}>
                         <RequestSaForEmailComponent/>
                     </Col> 
                 </Row>

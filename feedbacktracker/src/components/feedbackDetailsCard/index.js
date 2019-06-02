@@ -73,7 +73,7 @@ export class FeedbackDeatilsCardComponent extends React.Component {
 
             </Col>
 
-            {this.props.res[0]?<Col md={2}><h6>Rating : {this.props.res[0].OverallRating}</h6></Col>:''}
+            {this.props.res[0]?<Col md={2}><b>Rating: {this.props.res[0].OverallRating}</b></Col>:''}
           </Row>
         </Card.Body>
       </Card>
