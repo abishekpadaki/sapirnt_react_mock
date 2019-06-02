@@ -9,15 +9,17 @@ import Col from 'react-bootstrap/Col'
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as allactions from '../../actions/actionCreators';
+import { ViewFeedbackDatabase } from '../../components/viewallfbdb/viewfbdb';
 // import Container from 'react-bootstrap/Container'
 
-class Dashboard extends React.Component{
+export class Dashboard extends React.Component{
     constructor(props){
         super(props);
+        console.log(this.props.login.userDetails);
         
-        props.FetchRequests();
-        props.FetchFeedbackHistory();
-        // console.log(props)
+        // props.FetchRequests();
+        // props.FetchFeedbackHistory();
+        // // console.log(props)
     }
     
     getFeedbackData = (props) => {
@@ -44,25 +46,36 @@ class Dashboard extends React.Component{
         // console.log(this.props.login.userDetails.role)
         if(this.props.login.userDetails.role=="HR"){
         // console.log(this.props.login.userDetails.FirstName)
-        reqview = (
-          <React.Fragment>
-            {/* <Row>
-                            <Col md={4}>
-                                <RequestHrForRegistrationComponent/>
-                            </Col> 
-                            <Col md={4}>
-                                <RequestSaForEmailComponent/>
-                            </Col> 
-                        </Row> */}
-          </React.Fragment>
-        );
+        reqview=<React.Fragment>
+                
+                <Row>
+                    <FeedbackDeatilsCardComponent  {...this.props} res={this.getFeedbackData()}/>
+                </Row>
+                   
+            </React.Fragment>;
         
+    }
+    else if(this.props.login.userDetails.role=="SuperAdmin"){
+        reqview=<React.Fragment>
+                
+               
+         <Row>
+            <Col md={8}>
+                <ViewFeedbackDatabase/>
+                </Col> 
+                
+        </Row>
+   
+</React.Fragment>;
     }
 
     else{
         // console.log(this.props.login.FirstName);
 
         reqview=<React.Fragment>
+            <Row>
+                    <FeedbackDeatilsCardComponent  {...this.props} res={this.getFeedbackData()}/>
+                </Row>
        
                  <Row>
                     <Col md={3}>
@@ -87,9 +100,7 @@ class Dashboard extends React.Component{
                 <SideProfile {...this.props}/>
             </Col>
             <Col md={8}>
-                <Row>
-                    <FeedbackDeatilsCardComponent  {...this.props} res={this.getFeedbackData()}/>
-                </Row>
+               
                 {reqview}
             </Col>
         </Row>

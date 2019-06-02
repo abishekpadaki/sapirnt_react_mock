@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 
 
 function App() {
-  console.log("app.js",store);
+  
   return (
     <Provider store={store}>
       <BrowserRouter>
