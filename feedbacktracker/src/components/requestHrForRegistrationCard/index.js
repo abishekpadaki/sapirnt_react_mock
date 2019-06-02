@@ -10,13 +10,14 @@ export class RequestHrForRegistrationComponent extends React.Component{
   }
     render() {
         return (
-          <Card className="card_comp">
+          <Card className="card_comp text-center" style={{ width: '15rem' }}>
             <Card.Body>
               <Row className="justify-content-md-center">
                 <Card.Title>Request HR For Registration</Card.Title> 
               </Row>
              
               <Row className="justify-content-md-center">
+
               <Form onSubmit={()=>{this.handleclick()}}>
                   <Form.Group controlId="formBasicOID">
                     {/* <Form.Label>Email address</Form.Label> */}
@@ -49,7 +50,10 @@ export class RequestHrForRegistrationComponent extends React.Component{
                       placeholder="Candidate's Role"
                     />
                   </Form.Group>
-                  <Button variant="primary" type="submit" >
+                  
+
+                <Button variant="dark" type="submit">
+
                     Submit
                   </Button>
                 </Form>

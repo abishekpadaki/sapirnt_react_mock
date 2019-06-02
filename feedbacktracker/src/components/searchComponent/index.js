@@ -13,7 +13,7 @@ export class SearchComponent extends React.Component {
             className="mr-sm-2"
             ref="search_txt"
           />
-          <Button variant="outline-success"  onClick={() => {
+          <Button variant="outline-dark"  onClick={() => {
                                
                                this.props.history.push("/search_page");
                                sessionStorage.setItem("search_txt", this.refs.search_txt.value);
