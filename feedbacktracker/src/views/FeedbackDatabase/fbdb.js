@@ -6,25 +6,22 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as allactions from '../../actions/actionCreators';
 
-export class FeedbackHistory extends React.Component{
+export class FeedbackDatabase extends React.Component{
     constructor(props){
         super(props);
         this.state = {
             header:["Id", "FeedBack", "Rating"],
             values:[
-                {
-                    Id:"123456",
-                    FeedBack:"Amazing work keep going.",
-                    OverAllRating:"4"
-                }
+                
             ]
         }
         // props.FetchFeedbackHistory();
     }
 
     getFeedbackData = (props) => {
-        const res = this.props.allfeedBacks.filter((p,i) =>
-        p.OracleId === this.props.login.userDetails.oracleId);
+        const res = this.props.allfeedBacks;
+        console.log(res);
+       
 
         return res
     }
@@ -68,4 +65,4 @@ function mapDispatchToProps(dispatcher){
     return bindActionCreators(allactions,dispatcher)
 }
 
-export var MainFeedbackHistory  = connect(mapStateToProps,mapDispatchToProps)(FeedbackHistory);
+export var MainFeedbackDatabase  = connect(mapStateToProps,mapDispatchToProps)(FeedbackDatabase);

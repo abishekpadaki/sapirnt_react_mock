@@ -1,6 +1,7 @@
 import database from "../jsonData/peopleDetails";
 import feedBack from "../jsonData/feedBackData";
 import requests from "../jsonData/requestDb";
+import axios from'axios'
 
 // import { functionExpression } from "@babel/types";
 export const FETCH_FEEDBACK_HISTORY = 'FETCH_FEEDBACK_HISTORY';
@@ -13,7 +14,7 @@ export function AuthenicateUser(user){
     const userDetails = database.filter((p,i) =>
         p.oracleId === user.oracleId && p.password === user.password   
     );
-    // console.log(userDetails);
+    console.log(userDetails);
     localStorage.setItem('loggedInUser', JSON.stringify(userDetails[0]));
     return {type: 'IS_USER_AUTHENTICATED',userDetails};
 }
@@ -30,7 +31,18 @@ export function Logout(){
 export function FetchFeedbackHistory(){
    // console.log(feedBack);
     // localStorage.setItem('loggedInUser', JSON.stringify(userDetails[0]));
+    
     return {type: 'FETCH_FEEDBACK_HISTORY',feedBack};
+//     var thePromise = axios.get(feedBack);
+// return (dispatch)=>{
+//     thePromise.then(
+//         (response)=>{
+//             console.log('Dispatching FETCH_FEEDBACK_HISTORY')
+//             dispatch({type:'FETCH_FEEDBACK_HISTORY',response:response.data});// delaying the action dispacthing
+//         },
+//         (err)=>{}
+//     )
+// }
 }
 
 export function FetchRequests(){

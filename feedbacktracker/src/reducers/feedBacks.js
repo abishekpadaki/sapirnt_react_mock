@@ -6,7 +6,7 @@ export function feedBack(defStore = [], action){
             return action.feedBack;
         case 'ADD_NEW_FEEDBACK':
             console.log(defStore) 
-            debugger;  
+             
             console.log([...defStore, action.thenewproduct])                      
             return [...defStore, action.thenewproduct]
         default:
