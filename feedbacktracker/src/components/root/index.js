@@ -8,8 +8,12 @@ import { ForgotPassword } from '../../views/ForgotPassword/index';
 
 // import { AppLayout } from "./app.layout";
 import { ProtectedRoute } from "../../protected_route";
-import SearchPage from '../../views/SearchPage';
+import {MainSearchPage} from '../../views/SearchPage';
+import {MainFeedbackDatabase } from '../../views/FeedbackDatabase/fbdb';
 export default class RootApp extends React.Component{
+  componentWillMount(){
+    this.props.FetchFeedbackHistory();
+  }
   constructor(props){
     super(props)
     // console.log((localStorage.getItem('loggedInUser')))
@@ -24,7 +28,8 @@ export default class RootApp extends React.Component{
                           <ProtectedRoute exact path='/dashboard' component={MainDashboard} />
                           <ProtectedRoute exact path='/feedback_history' component={MainFeedbackHistory} />
                           <ProtectedRoute exact path='/feedback_form' component={FeedbackForm} {...this.props}/>
-                          <ProtectedRoute exact path='/search_page' component={SearchPage}/>
+                          <ProtectedRoute exact path='/search_page' component={MainSearchPage}/>
+                          <ProtectedRoute exact path='/fb_db' component={MainFeedbackDatabase}/>
 
                           
                           

@@ -38,6 +38,7 @@ export class FeedbackForm extends React.Component{
         };
         console.log(this.props)
         this.props.AddNewFeedback(aNewProduct);
+        alert("Feedback sent");
  
     }
 
@@ -47,7 +48,7 @@ export class FeedbackForm extends React.Component{
             
             <Container>
             {/* <NavbarComponent role={this.props.login.userDetails.role} res={this.getRequests()} {...this.props}/> */}
-            <Form >    
+            <Form>    
         <Form.Group><h1>Feedback Form</h1></Form.Group>
         
         <Form.Group>
@@ -180,26 +181,10 @@ export class FeedbackForm extends React.Component{
                     <option value="1">1</option>
                 </select>
             </Form.Group>
-            <Button type="button"  className="btn btn-primary" onClick={this.handleaddnewfeedback.bind(this)}>Submit</Button>
+            <Button type="button"  className="btn btn-primary" onClick={this.handleaddnewfeedback.bind(this)} >Submit</Button>
         </Form>
     </Container>
         </React.Fragment>)
     }
 }
 
-// function mapStateToProps(store){
-//     // console.log(store);
-//     return {
-//         login:store.users,
-//         allregistrations:store.registrations,
-//         allfeedBacks:store.feedBack,
-//         allsearchCards:store.searchCards,
-//         allrequests:store.requests        
-// }
-// }
-
-// function mapDispatchToProps(dispatcher){
-//     return bindActionCreators(allactions,dispatcher)
-// }
-
-// export default connect(mapStateToProps,mapDispatchToProps)(FeedbackForm);

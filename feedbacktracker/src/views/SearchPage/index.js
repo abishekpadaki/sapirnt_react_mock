@@ -185,4 +185,4 @@ function mapDispatchToProps(dispatcher){
     return bindActionCreators(allactions,dispatcher)
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(SearchPage);
+export var MainSearchPage = connect(mapStateToProps,mapDispatchToProps)(SearchPage);
