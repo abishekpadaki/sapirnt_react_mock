@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col,Form,Button } from "react-bootstrap";
+import {Link} from "react-router-dom"
 
 import auth from "../../auth"
 // import "./styles/LoginView.css";
@@ -8,7 +9,7 @@ export class Login extends React.Component{
        super(props);
        this.state = {
            oracleId:"",
-           password:""
+           password:"",
        }
     }
     HandleFormSubmit(e) {
@@ -41,7 +42,7 @@ export class Login extends React.Component{
                 </Col>
                 <Col md={4}>
                     <Container>
-                    <Row>
+                    <Row className="justify-content-md-center">
                         <h2>FEEDBACK TRACKER</h2>
                     </Row>
                     <Form onSubmit = {this.HandleFormSubmit.bind(this)}>
@@ -50,7 +51,8 @@ export class Login extends React.Component{
                             <Form.Control 
                                 type="text"
                                 ref="oracleId" 
-                                placeholder="Enter Oracle Id" 
+                                placeholder="Enter Oracle Id"
+                                required 
                                 value = {this.state.oracleId}
                                 onChange={(e) => {
                                     return this.setState({ oracleId: e.target.value })
@@ -68,6 +70,7 @@ export class Login extends React.Component{
                                 type="password" 
                                 placeholder="Password" 
                                 value = {this.state.password}
+                                required
                                 onChange={(e) => {
                                     return this.setState({ password: e.target.value })
                                 }
@@ -89,8 +92,13 @@ export class Login extends React.Component{
                         >                            
                             Submit
                         </Button>
-                    </Form>
+                        
+                    </Form><br></br>
+                    <Link to="/forgot_password">
+                        <Button>Forgot Password</Button></Link>
+                    
                     </Container>
+                    
                 </Col>
                 </Row>
         </React.Fragment>

@@ -5,6 +5,9 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 export class RequestSaForEmailComponent extends React.Component{
+  handleclick(){
+    alert("Email Request sent");
+  }
     render() {
         return (
           <Card className="card_comp">
@@ -12,13 +15,14 @@ export class RequestSaForEmailComponent extends React.Component{
               <Row className="justify-content-md-center">
                 <Card.Title>Request SA for email</Card.Title>
               </Row>
-              <Row>
-                <Form>
+              <Row className="justify-content-md-center">
+                <Form onSubmit={()=>{this.handleclick()}}>
                   <Form.Group controlId="formBasicEmail">
                     {/* <Form.Label>Email address</Form.Label> */}
                     <Form.Control
                       type="email"
                       placeholder="Your email id"
+                      required
                     />
                     </Form.Group>
                     <Form.Group controlId="formBasicCandidateId">
@@ -28,7 +32,8 @@ export class RequestSaForEmailComponent extends React.Component{
                       placeholder="Candidate's ORACLE ID"
                     />
                   </Form.Group>
-                  <Button variant="primary" type="submit">
+                  <Button variant="primary" type="submit"
+                    >
                     Submit
                   </Button>
                 </Form>

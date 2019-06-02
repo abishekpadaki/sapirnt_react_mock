@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import { TPMdl } from '../thirdpartymodal';
 function alert_display(){
   
     alert("Feedback Request Sent");
@@ -48,9 +49,7 @@ export class SearchResultComponent extends React.Component{
                     </button>
                   </Row>
                   <Row>
-                    <button className="btn btn-primary srchbuttn">
-                      Request Feedback for Someone Else
-                    </button>
+                    <TPMdl></TPMdl>
                   </Row>                  
                 </Col>
                 </Row>

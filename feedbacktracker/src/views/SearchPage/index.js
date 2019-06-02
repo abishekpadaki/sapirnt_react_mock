@@ -96,7 +96,7 @@ getRequests = (props) => {
 
 render(){
 
-    console.log(this.props)
+    
     var x= sessionStorage.getItem('search_txt');
     console.log(x);
     let searchview;

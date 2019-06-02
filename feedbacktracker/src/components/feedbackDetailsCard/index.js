@@ -3,6 +3,8 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from 'react-bootstrap/Col';
 import Button from "react-bootstrap/Button";
+import {GAMdl} from "../growthareasmdl/index"
+import {T5fbMdl} from "../top5fb/index"
 
 import auth from "../../auth"
 
@@ -62,14 +64,14 @@ export class FeedbackDeatilsCardComponent extends React.Component {
             </Col>
 
             <Col md={3}>
-              <Button variant="primary">Growth Areas</Button>
+              <GAMdl value={this.props.res[0].GrowthAreas}></GAMdl>
             </Col>
 
             <Col md={3}>
-              <Button variant="primary">Top 5 Feedbacks</Button>
+            <T5fbMdl value={this.props.res[0].Top5Stuff}></T5fbMdl>
             </Col>
 
-            {this.props.res[0]?<Col md={2}>Rating : {this.props.res[0].OverallRating}</Col>:''}
+            {this.props.res[0]?<Col md={2}><h6>Rating : {this.props.res[0].OverallRating}</h6></Col>:''}
           </Row>
         </Card.Body>
       </Card>
