@@ -3,8 +3,12 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+
+import { TPMdl } from '../thirdpartymodal';
+
 import Button from 'react-bootstrap/Button';
 import './styles/searchResultsCard.css'
+
 function alert_display(){
   
     alert("Feedback Request Sent");
@@ -50,9 +54,9 @@ export class SearchResultComponent extends React.Component{
                     </Button>
                   </Row>
                   <Row>
-                    <Button block className="btn btn-dark srchbuttn">
-                      Request Feedback for Someone Else
-                    </Button>
+
+                    <TPMdl></TPMdl>
+
                   </Row>                  
                 </Col>
                 </Row>

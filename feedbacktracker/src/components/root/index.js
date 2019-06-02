@@ -16,7 +16,7 @@ export default class RootApp extends React.Component{
   }
   constructor(props){
     super(props)
-    // console.log((localStorage.getItem('loggedInUser')))
+    console.log((localStorage.getItem('loggedInUser')))
     const users= JSON.parse(localStorage.getItem('loggedInUser'));
     if(users) this.props.AuthenicateUser(users);
   }
