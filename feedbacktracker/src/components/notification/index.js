@@ -38,7 +38,7 @@ export class Notifications extends React.Component {
         
         return <React.Fragment >
             <div className="dropdown">
-                <button className="btn btn-primary dropdown">
+                <button className="btn btn-dark dropdown">
                     {/* <i className={this.props.values.icon} > </i> */}
                     <i className="fas fa-bell"></i>
                     <span className="badge badge-warning">{bdg}</span>

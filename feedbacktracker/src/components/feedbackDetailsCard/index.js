@@ -37,22 +37,22 @@ export class FeedbackDeatilsCardComponent extends React.Component {
     // p.OracleId === this.props.login.userDetails.oracleId);
     
     return (
-      <Card>
+      <Card className="card_comp text-center">
         <Card.Body>
-          <Row>
+          <Row className="justify-content-md-center">
           {this.props.res[0]?<Card.Title>
             Feedback from {this.props.res[0].SenderFirstName}
             </Card.Title>:''}
             <br />
           </Row>
-          <Row>
+          <Row className="justify-content-md-center">
           {this.props.res[0]?<Card.Text>{this.props.res[0].Suggestions}</Card.Text>:''}
             <br />
           </Row>
           <Row>
             <Col md={4}>
               <Button
-                variant="primary"
+                variant="dark"
                 onClick={() => {
                   this.props.history.push("/feedback_history");
                 }}
@@ -62,11 +62,11 @@ export class FeedbackDeatilsCardComponent extends React.Component {
             </Col>
 
             <Col md={3}>
-              <Button variant="primary">Growth Areas</Button>
+              <Button variant="dark">Growth Areas</Button>
             </Col>
 
             <Col md={3}>
-              <Button variant="primary">Top 5 Feedbacks</Button>
+              <Button variant="dark">Top 5 Feedbacks</Button>
             </Col>
 
             {this.props.res[0]?<Col md={2}>Rating : {this.props.res[0].OverallRating}</Col>:''}

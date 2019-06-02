@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col,Form,Button } from "react-bootstrap";
+import './styles/LoginView.css'
+
 
 import auth from "../../auth"
 // import "./styles/LoginView.css";
@@ -34,8 +36,8 @@ export class Login extends React.Component{
             });
         }
         // console.log(this.props)
-        return <React.Fragment>
-            <Row>
+        return <React.Fragment >
+            <Row >
                 <Col md={8}>
                     <img className="img-fluid" src='assets/landingPage_Image.jpg' />
                 </Col>
@@ -44,7 +46,7 @@ export class Login extends React.Component{
                     <Row>
                         <h2>FEEDBACK TRACKER</h2>
                     </Row>
-                    <Form onSubmit = {this.HandleFormSubmit.bind(this)}>
+                    <Form  onSubmit = {this.HandleFormSubmit.bind(this)}>
                         <Form.Group controlId="formBasicOracleId">
                             <Form.Label>Oracle Id</Form.Label>
                             <Form.Control 
@@ -75,7 +77,7 @@ export class Login extends React.Component{
                             />
                         </Form.Group>
                         
-                        <Button variant="primary" type="submit"
+                        <Button variant="dark" type="submit"
                             // username={this.state.username}
                             // password={this.state.password}
                             onClick={(e) => {

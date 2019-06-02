@@ -44,19 +44,18 @@ class Dashboard extends React.Component{
         // console.log(this.props.login.userDetails.role)
         if(this.props.login.userDetails.role=="HR"){
         // console.log(this.props.login.userDetails.FirstName)
-        reqview=<React.Fragment>
-                
-               
-                        {/* <Row>
+        reqview = (
+          <React.Fragment>
+            {/* <Row>
                             <Col md={4}>
                                 <RequestHrForRegistrationComponent/>
-                                </Col> 
-                                <Col md={4}>
+                            </Col> 
+                            <Col md={4}>
                                 <RequestSaForEmailComponent/>
-                                </Col> 
+                            </Col> 
                         </Row> */}
-                   
-            </React.Fragment>;
+          </React.Fragment>
+        );
         
     }
 
@@ -66,12 +65,12 @@ class Dashboard extends React.Component{
         reqview=<React.Fragment>
        
                  <Row>
-                    <Col md={4}>
+                    <Col md={3}>
                         <RequestHrForRegistrationComponent/>
-                        </Col> 
-                        <Col md={4}>
+                    </Col> 
+                    <Col md={4}>
                         <RequestSaForEmailComponent/>
-                        </Col> 
+                    </Col> 
                 </Row>
                 
             
@@ -92,8 +91,8 @@ class Dashboard extends React.Component{
                     <FeedbackDeatilsCardComponent  {...this.props} res={this.getFeedbackData()}/>
                 </Row>
                 {reqview}
-                </Col>
-                </Row>
+            </Col>
+        </Row>
                 </React.Fragment>)
 }
 }
