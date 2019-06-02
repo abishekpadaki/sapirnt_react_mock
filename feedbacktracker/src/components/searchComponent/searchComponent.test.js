@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {SearchResultComponent} from './index';
-
-
-
+import {SearchComponent} from './index';
+var history=[];
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<SearchResultComponent pic={"test"} fname={"test"} lname={"test"} id={"123"} role={"test"} />, div);
+  ReactDOM.render(<SearchComponent history={history}  />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
