@@ -25,7 +25,7 @@ export class Tbl extends React.Component{
                 </tr>
             }
         )
-    return <Table responsive bordered hover variant="dark">
+    return <Table responsive bordered hover>
         <thead>
             {headerDisplay}
         </thead>

@@ -7,12 +7,12 @@ import Button from 'react-bootstrap/Button';
 export class RequestSaForEmailComponent extends React.Component{
     render() {
         return (
-          <Card className="card_comp">
+          <Card className="card_comp text-center" style={{ width: '21rem' }}>
             <Card.Body>
               <Row className="justify-content-md-center">
                 <Card.Title>Request SA for email</Card.Title>
               </Row>
-              <Row>
+              <Row className="justify-content-md-center">
                 <Form>
                   <Form.Group controlId="formBasicEmail">
                     {/* <Form.Label>Email address</Form.Label> */}
@@ -28,7 +28,7 @@ export class RequestSaForEmailComponent extends React.Component{
                       placeholder="Candidate's ORACLE ID"
                     />
                   </Form.Group>
-                  <Button variant="primary" type="submit">
+                  <Button variant="dark" type="submit">
                     Submit
                   </Button>
                 </Form>

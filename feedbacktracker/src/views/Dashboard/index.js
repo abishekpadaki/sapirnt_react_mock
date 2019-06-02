@@ -78,12 +78,12 @@ export class Dashboard extends React.Component{
                 </Row>
        
                  <Row>
-                    <Col md={4}>
+                    <Col md={3}>
                         <RequestHrForRegistrationComponent/>
-                        </Col> 
-                        <Col md={4}>
+                    </Col> 
+                    <Col md={4}>
                         <RequestSaForEmailComponent/>
-                        </Col> 
+                    </Col> 
                 </Row>
                 
             
@@ -102,8 +102,8 @@ export class Dashboard extends React.Component{
             <Col md={8}>
                
                 {reqview}
-                </Col>
-                </Row>
+            </Col>
+        </Row>
                 </React.Fragment>)
 }
 }

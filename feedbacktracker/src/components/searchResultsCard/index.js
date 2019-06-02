@@ -3,6 +3,8 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import Button from 'react-bootstrap/Button';
+import './styles/searchResultsCard.css'
 function alert_display(){
   
     alert("Feedback Request Sent");
@@ -42,15 +44,15 @@ export class SearchResultComponent extends React.Component{
                   </Row>
                 </Col>
                 <Col>
-                  <Row>
-                    <button className="btn btn-primary srchbuttn" onClick={() => { alert("Feedback Request Sent")}}>
+                  <Row className="requestFeedbackforSelfTopMargin">
+                    <Button className="btn btn-dark srchbuttn" block onClick={() => { alert("Feedback Request Sent")}}>
                       Request Feedback for Self
-                    </button>
+                    </Button>
                   </Row>
                   <Row>
-                    <button className="btn btn-primary srchbuttn">
+                    <Button block className="btn btn-dark srchbuttn">
                       Request Feedback for Someone Else
-                    </button>
+                    </Button>
                   </Row>                  
                 </Col>
                 </Row>
