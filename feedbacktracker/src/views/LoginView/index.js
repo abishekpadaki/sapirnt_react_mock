@@ -47,12 +47,12 @@ export class Login extends React.Component{
                 </Col>
                 <Col md={4}>
                     <Container>
-                    <Row className="justify-content-md-center">
-                        <h2>FEEDBACK TRACKER</h2>
+                    <Row className="justify-content-md-center loginbox">
+                        <h2>Feedback Tracker</h2>
                     </Row>
                     <Form  onSubmit = {this.HandleFormSubmit.bind(this)}>
                         <Form.Group controlId="formBasicOracleId">
-                            <Form.Label>Oracle Id</Form.Label>
+                            <Form.Label><b>Oracle Id</b></Form.Label>
                             <Form.Control 
                                 type="text"
                                 ref="oracleId" 
@@ -70,7 +70,7 @@ export class Login extends React.Component{
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label><b>Password</b></Form.Label>
                             <Form.Control 
                                 type="password" 
                                 placeholder="Password" 
