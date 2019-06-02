@@ -34,7 +34,7 @@ render() {
     
     return (
     <>
-        <Button variant="primary" onClick={this.handleShow}>
+        <Button variant="primary btn-dark" onClick={this.handleShow}>
         Growth Areas
         </Button>
 

@@ -16,7 +16,7 @@ export class ViewFeedbackDatabase extends React.Component{
              
               <Row className="justify-content-md-center">
                    <Link to="/fb_db">
-                <Button variant="primary" >
+                <Button variant="dark" >
                     Click to View
                 </Button>
                 </Link>

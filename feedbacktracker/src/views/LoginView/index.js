@@ -100,7 +100,7 @@ export class Login extends React.Component{
                         
                     </Form><br></br>
                     <Link to="/forgot_password">
-                        <Button>Forgot Password</Button></Link>
+                        <Button variant="dark">Forgot Password</Button></Link>
                     
                     </Container>
                     
