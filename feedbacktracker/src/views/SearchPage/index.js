@@ -110,7 +110,7 @@ for(var key in clist){
     
         
 
-if (clist[key].OracleID==x){
+if (clist[key].oracleId==x){
     match[j]=clist[key];
     j++;
 }
