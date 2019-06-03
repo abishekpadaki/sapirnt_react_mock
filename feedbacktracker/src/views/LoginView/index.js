@@ -48,6 +48,7 @@ export class Login extends React.Component{
                 <Col md={4}>
                     <Container>
                     <Row className="justify-content-md-center loginbox">
+                        <img className="img-fluid sap_logo" src='assets/sapient_logo.png'/>
                         <h2>Feedback Tracker</h2>
                     </Row>
                     <Form  onSubmit = {this.HandleFormSubmit.bind(this)}>

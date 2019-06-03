@@ -51,6 +51,11 @@ export class Dashboard extends React.Component{
                 <Row>
                     <FeedbackDeatilsCardComponent  {...this.props} res={this.getFeedbackData()}/>
                 </Row>
+                <Row>
+                
+                        <RequestSaForEmailComponent/>
+                    
+                </Row>
                    
             </React.Fragment>;
         

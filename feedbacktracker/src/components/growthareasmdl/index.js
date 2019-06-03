@@ -27,14 +27,14 @@ render() {
     
     let modalFooter;
         modalFooter = <React.Fragment> 
-            <Button variant="primary" onClick={this.handleClose}>
+            <Button variant="dark" onClick={this.handleClose}>
                 Close
             </Button>
         </React.Fragment>;
     
     return (
     <>
-        <Button variant="primary btn-dark" onClick={this.handleShow}>
+        <Button variant="dark" onClick={this.handleShow}>
         Growth Areas
         </Button>
 
