@@ -46,7 +46,7 @@ export class FeedbackForm extends React.Component{
         console.log(this.props)
         return(<React.Fragment>
             
-            <Container>
+            <Container className="fbformcontainer">
             {/* <NavbarComponent role={this.props.login.userDetails.role} res={this.getRequests()} {...this.props}/> */}
             <Form>    
         <Form.Group><h1>Feedback Form</h1></Form.Group>
@@ -181,7 +181,7 @@ export class FeedbackForm extends React.Component{
                     <option value="1">1</option>
                 </select>
             </Form.Group>
-            <Button type="button"  className="btn btn-primary" onClick={this.handleaddnewfeedback.bind(this)} >Submit</Button>
+            <Button type="button"  variant="dark" onClick={this.handleaddnewfeedback.bind(this)} >Submit</Button>
         </Form>
     </Container>
         </React.Fragment>)
